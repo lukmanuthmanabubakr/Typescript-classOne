@@ -30,3 +30,13 @@ const placeOrder = (pizzaItem) => {
     orderQueue.push(newOrder)
     return newOrder
 }
+
+const completeOrder = (orderId) => {
+    const findOrder = orderQueue.find(addNewPizza => getItem.status)
+}
+
+//Task 1
+let age = 5
+const name = "Abubakr"
+
+// Task 2
