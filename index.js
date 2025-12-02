@@ -14,3 +14,15 @@ const orderQueue = []
 const addNewPizza = (getItem) => {
     menu.push(getItem)
 }
+
+
+// Write another utility function placeOrder, that takes the pizza name parameter and: 
+// 1 find thats pizza object in the menu
+// 2. Add the income to the cashInRegister
+// 3. Pushes a new "Order object" to the orderQueue
+// e.g (pizza: selectedPizzaObjectfromstep1, status: "ordered")
+// return the new order object
+
+const placeOrder = (pizzaItem) => {
+    const findPizza = menu.find(pizzaObj => pizzaObj.name === pizzaItem)
+}
