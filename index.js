@@ -24,5 +24,9 @@ const addNewPizza = (getItem) => {
 // return the new order object
 
 const placeOrder = (pizzaItem) => {
-    const findPizza = menu.find(pizzaObj => pizzaObj.name === pizzaItem)
+    const findPizza = menu.find(getItem => getItem.name === pizzaItem)
+    cashInRegister += findPizza.price
+    const newOrder = {pizza: findPizza, status: "ordered"}
+    orderQueue.push(newOrder)
+    return newOrder
 }
