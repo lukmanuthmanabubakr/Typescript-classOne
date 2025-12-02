@@ -7,3 +7,10 @@ const menu = [
 
 const cashInRegister = 100
 const orderQueue = []
+
+// Add a utility function "addNewPizza" thats take pizza object
+// And add it to the menu
+
+const addNewPizza = (getItem) => {
+    menu.push(getItem)
+}
