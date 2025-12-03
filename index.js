@@ -94,12 +94,15 @@ const vowelCounting = (countVowels) => {
     }
 }
 
-//Task 10 
-const acceptArray = (capture) => {
-    capture.forEach(element => {
-        
-    });
-}
+const acceptArray = (arr) => {
+  arr.forEach(element => {
+    console.log(element); // print each element
+  });
+};
+
+// Example usage:
+acceptArray(["Alice", "Bob", "Charlie"]);
+
 
 // const items = ["Yam", "Benas", "Rice"];
 
