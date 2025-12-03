@@ -47,16 +47,16 @@ const phone = {
 const fruit = ["Orange", "Apple", "Banana"];
 
 // Task 4
-const doubleNumber = () => {
-  let singleNumber;
-  const result = singleNumber * 2;
-  return result;
+const doubleNumber = (addnumber) => {
+  const result = addnumber * 2;
+  return result
 };
 
 // Taks 5
-const number = ""
-if (number > 10){
-    return "Big Number"
-}else{
-    return "Small Number"
-}
+const checkNumber = (number) => {
+  if (number > 10) {
+    return "Big Number";
+  } else {
+    return "Small Number";
+  }
+};
