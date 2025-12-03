@@ -7,3 +7,4 @@ document.write("My name is Abubakr")
 document.write("A developer that know noting")
 
 console.log("I know i will get better ");
+
