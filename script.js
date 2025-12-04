@@ -86,3 +86,10 @@ function sayHello(myName) {
   console.log("My name" + " " + myName);
 }
 sayHello("Abubakr");
+
+//Data types
+let firstName = "Dev"
+let lastName = 'Abu'
+
+let num = 1000
+document.write(num)
