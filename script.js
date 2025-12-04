@@ -107,7 +107,7 @@ let completed = false;
 
 console.log(typeof learning, typeof completed);
 
-const b = 60 < 100
+const b = 60 < 100;
 console.log(typeof b);
 
 let aged;
@@ -115,3 +115,16 @@ let aged;
 console.log(aged);
 console.log(typeof aged);
 
+let number = null;
+
+console.log(number);
+console.log(typeof number);
+
+console.log(null == undefined);
+
+let person = {};
+
+function addDetails(name, age) {
+  console.log(name, age);
+}
+addDetails("david", 80)
