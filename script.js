@@ -125,6 +125,10 @@ console.log(null == undefined);
 let person = {};
 
 function addDetails(name, age) {
-  console.log(name, age);
+  person.name = name;
+  person.age = age
+
+  console.log(person);
+  
 }
 addDetails("david", 80)
