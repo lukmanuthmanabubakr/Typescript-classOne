@@ -1,5 +1,5 @@
 // To show Notification we use
-alert("My name is dev Abu");
+// alert("My name is dev Abu");
 
 // instead of writing in  my html i can use this
 document.write("My name is dev abu");
@@ -52,7 +52,7 @@ document.write(
   "Backend / Full-Stack Developer with 3+ years experience building scalable web applications and blockchain-integrated platforms. I specialize in the MERN stack, Node.js, and MongoDB to design high-performance APIs, integrate smart contracts, and develop secure fintech and DeFi solutions for sectors like car rental, healthcare, and payment systems, focused on delivering reliable, user-centered backend systems."
 );
 
-alert("Welcome, your app is loading...");
+// alert("Welcome, your app is loading...");
 
 const age = 18;
 
@@ -88,8 +88,28 @@ function sayHello(myName) {
 sayHello("Abubakr");
 
 //Data types
-let firstName = "Dev"
-let lastName = 'Abu'
+let firstName = "Dev";
+let lastName = "Abu";
 
-let num = 1000
-document.write(num)
+let num = 96.9;
+document.write(num);
+console.log(num);
+
+let xes = "60.91838";
+
+console.log(typeof xes);
+
+let gender = 60;
+console.log(typeof gender);
+
+let learning = true;
+let completed = false;
+
+console.log(typeof learning, typeof completed);
+
+const b = 60 < 100
+console.log(typeof b);
+
+let aged;
+
+console.log(aged);
