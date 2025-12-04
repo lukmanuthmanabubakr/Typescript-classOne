@@ -113,3 +113,5 @@ console.log(typeof b);
 let aged;
 
 console.log(aged);
+console.log(typeof aged);
+
