@@ -33,7 +33,56 @@ function exampleTwo() {
 
   console.log(fs);
 }
-exampleTwo()
-  console.log(fs);
+exampleTwo();
+// console.log(fs);
 
 // block scope
+function exampleThree() {
+  if (true) {
+    let bv = "Legend";
+    console.log(bv);
+  }
+  //   console.log(bv);
+}
+exampleThree();
+
+document.write("My name is Abubakr");
+document.write(19);
+document.write(
+  "Backend / Full-Stack Developer with 3+ years experience building scalable web applications and blockchain-integrated platforms. I specialize in the MERN stack, Node.js, and MongoDB to design high-performance APIs, integrate smart contracts, and develop secure fintech and DeFi solutions for sectors like car rental, healthcare, and payment systems, focused on delivering reliable, user-centered backend systems."
+);
+
+alert("Welcome, your app is loading...");
+
+const age = 18;
+
+if (age > 18) {
+  document.write("You are an adult");
+  console.log("You are an adult");
+} else {
+  document.write("You are still young");
+  console.log("You are still young");
+}
+
+var day = "Monday";
+
+function printDay() {
+  let today = "wednesday";
+  console.log(today, day);
+}
+printDay();
+// console.log(today, day);
+
+function bScope() {
+  if (true) {
+    let y = 87;
+    console.log(y);
+  }
+  // console.log(y);
+}
+bScope();
+
+function sayHello(myName) {
+  console.log("My name" + " " + myName);
+}
+sayHello("Abubakr");
