@@ -129,6 +129,9 @@ function addDetails(name, age) {
   person.age = age
 
   console.log(person);
+  console.log(typeof person);
   
 }
 addDetails("david", 80)
+
+let
