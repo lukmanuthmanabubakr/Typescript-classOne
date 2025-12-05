@@ -221,3 +221,8 @@ console.log(typeof u);
 
 console.log(a == b);
 console.log(a === b);
+
+
+let students = {}
+
+function setStudentDetails
