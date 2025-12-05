@@ -273,9 +273,14 @@ function calculator(a, b, symbols) {
     result = a ** b;
   } else if (symbols === "%") {
     result = a % b;
-  }else {
-    result = "Error number"
+  } else {
+    result = "Error number";
   }
   console.log(result);
 }
 calculator(5, 8, "%");
+
+//Assignment operator
+let h = 5;
+h += 9;
+console.log(h);
