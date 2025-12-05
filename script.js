@@ -234,3 +234,17 @@ setStudentDetails("Dev Abu", 90);
 let result = 20 < 15;
 console.log(result);
 console.log(typeof result);
+
+let p;
+console.log(p);
+console.log(typeof p);
+
+
+p = "Legend Dev"
+
+console.log(p);
+console.log(typeof p);
+
+p = false
+console.log(p);
+console.log(typeof p);
