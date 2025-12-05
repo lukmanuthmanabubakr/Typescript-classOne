@@ -239,12 +239,42 @@ let p;
 console.log(p);
 console.log(typeof p);
 
-
-p = "Legend Dev"
+p = "Legend Dev";
 
 console.log(p);
 console.log(typeof p);
 
-p = false
+p = false;
 console.log(p);
 console.log(typeof p);
+
+//Arithmetic Operators
+
+//Addition
+
+let sum = 5 + 3;
+console.log(sum);
+
+//Subtraction
+let sub = 5 - 3;
+console.log(sub);
+//Multiply
+let multiply = 5 - 3;
+console.log(multiply);
+
+// My task
+function simpleMath(sampleA, smapleB, operators) {
+  let result;
+  if (operators === "+") {
+    result = sampleA + smapleB;
+  } else if (operators === "-") {
+    result = sampleA - smapleB;
+  } else if (operators === "*") {
+    result = sampleA * smapleB;
+  } else if (operators === "/") {
+    result = sampleA / smapleB;
+  }
+
+  console.log(result);
+}
+simpleMath(60, 80, "+");
