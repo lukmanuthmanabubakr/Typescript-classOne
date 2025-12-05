@@ -263,18 +263,3 @@ let multiply = 5 - 3;
 console.log(multiply);
 
 // My task
-function simpleMath(sampleA, smapleB, operators) {
-  let result;
-  if (operators === "+") {
-    result = sampleA + smapleB;
-  } else if (operators === "-") {
-    result = sampleA - smapleB;
-  } else if (operators === "*") {
-    result = sampleA * smapleB;
-  } else if (operators === "/") {
-    result = sampleA / smapleB;
-  }
-
-  console.log(result);
-}
-simpleMath(60, 80, "+");
