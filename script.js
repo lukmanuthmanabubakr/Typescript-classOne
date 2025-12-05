@@ -126,12 +126,98 @@ let person = {};
 
 function addDetails(name, age) {
   person.name = name;
-  person.age = age
+  person.age = age;
 
   console.log(person);
   console.log(typeof person);
-  
 }
-addDetails("david", 80)
+addDetails("david", 80);
 
-let
+let country = {};
+
+function declareConntryStateandCapital(state, capital) {
+  country.state = state;
+  country.capital = capital;
+
+  console.log(country);
+}
+declareConntryStateandCapital("Lagos", "Ikeja");
+
+let numberss = [1, 2, 3, 4, 5];
+
+console.log(numberss);
+console.log(typeof numberss);
+
+function msg() {
+  console.log("Hello Dev Abu");
+}
+console.log(typeof msg);
+
+//Test
+
+let laptops = "MacBook Pro";
+console.log(typeof laptops);
+
+let laptopsPrice = 500;
+console.log(typeof laptopsPrice);
+
+let increaseLaptopPrice = true;
+console.log(increaseLaptopPrice);
+
+console.log(typeof increaseLaptopPrice);
+
+let soldLaptops;
+console.log(typeof soldLaptops);
+
+let noSoldLaptops = null;
+console.log(noSoldLaptops);
+
+console.log(typeof noSoldLaptops);
+
+let car = {};
+
+function addCarDetails(model, year) {
+  car.model = model;
+  car.year = year;
+
+  console.log(car);
+  console.log(typeof car);
+}
+addCarDetails(2025, "Benz");
+
+let arrayOfFour = [600, 900, 490, 500];
+
+function allFourNumbs(addNum) {
+  console.log(arrayOfFour);
+  console.log(typeof arrayOfFour);
+  arrayOfFour.addNum = +console.log(arrayOfFour);
+}
+
+allFourNumbs();
+
+function checkScore(score) {
+  if (score > 50) {
+    console.log("Pass");
+    console.log(typeof "Pass");
+  } else {
+    console.log("Fail");
+    console.log(typeof "Fail");
+  }
+}
+checkScore(90);
+
+function sayName(myNmae) {
+  console.log("My name is" + " " + myNmae);
+}
+sayName("Dev abu");
+
+let a;
+let u = null;
+
+console.log(a);
+console.log(typeof a);
+console.log(u);
+console.log(typeof u);
+
+console.log(a == b);
+console.log(a === b);
