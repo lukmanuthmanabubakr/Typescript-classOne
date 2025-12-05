@@ -263,3 +263,14 @@ let multiply = 5 - 3;
 console.log(multiply);
 
 // My task
+function calculator(a, b, symbols) {
+  let result;
+  if (symbols === "+") {
+    result = a + b;
+  } else if (symbols === "-") {
+    result = a - b;
+  }
+  console.log(result);
+  
+}
+calculator(5, 8, "+");
