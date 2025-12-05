@@ -183,14 +183,14 @@ function addCarDetails(model, year) {
   console.log(car);
   console.log(typeof car);
 }
-addCarDetails(2025, "Benz");
+addCarDetails("Benz", 2025);
 
 let arrayOfFour = [600, 900, 490, 500];
 
-function allFourNumbs(addNum) {
-  console.log(arrayOfFour);
+function allFourNumbs() {
   console.log(typeof arrayOfFour);
-  arrayOfFour.addNum = +console.log(arrayOfFour);
+  arrayOfFour.push(600);
+  console.log(arrayOfFour);
 }
 
 allFourNumbs();
@@ -222,7 +222,15 @@ console.log(typeof u);
 console.log(a == b);
 console.log(a === b);
 
+let students = {};
 
-let students = {}
+function setStudentDetails(name, scoresArray) {
+  students.name = name;
+  students.scoresArray = scoresArray;
+  console.log(students);
+}
+setStudentDetails("Dev Abu", 90);
 
-function setStudentDetails
+let result = 20 < 15;
+console.log(result);
+console.log(typeof result);
