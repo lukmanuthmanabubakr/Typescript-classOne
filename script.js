@@ -269,8 +269,13 @@ function calculator(a, b, symbols) {
     result = a + b;
   } else if (symbols === "-") {
     result = a - b;
+  } else if (symbols === "**") {
+    result = a ** b;
+  } else if (symbols === "%") {
+    result = a % b;
+  }else {
+    result = "Error number"
   }
   console.log(result);
-  
 }
-calculator(5, 8, "+");
+calculator(5, 8, "%");
