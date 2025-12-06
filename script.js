@@ -425,5 +425,7 @@ addDScore("David", 500, 10);
 
 //increment and decremnt operator
 let g = 10;
-console.log(++g);
+// console.log(++g);
+console.log(g++);
+console.log(g);
 console.log(--g);
