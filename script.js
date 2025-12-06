@@ -432,16 +432,19 @@ console.log(--g);
 
 //Comparison operaors
 
-let l = 10;
+let l = '10';
 let m = 20;
 
-console.log(l < m);
-console.log(l > m);
-console.log(l <= m);
-console.log(l >= m);
+// console.log(l < m);
+// console.log(l > m);
+// console.log(l <= m);
+// console.log(l >= m);
+
+// console.log(l == m);
+// console.log(l != m);
 
 console.log(l == m);
-console.log(l != m);
-
 console.log(l === m);
 console.log(l !== m);
+
+// Logical Operators
