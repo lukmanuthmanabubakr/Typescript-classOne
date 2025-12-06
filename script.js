@@ -404,9 +404,9 @@ miniCalculatoor("+", 50, 70);
 let numbers;
 
 function checkEodd(num) {
-  if (!num % 2) {
-    console.log("Odd");
-  } else if (num % 2) {
+  if (num % 2 === 0) {
+    console.log("Even");
+  } else if (num % 2 !== 0) {
     console.log("even");
   }
 }
