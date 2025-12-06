@@ -283,5 +283,57 @@ calculator(5, 8, "%");
 //Assignment operator
 let h = 5;
 h += 9;
-h **= 2
+h **= 2;
 console.log(h);
+
+// Task 1
+alert("Am i in the right page");
+document.write("yes, Welcome to Dev abu's Page");
+console.log("Let's start coding");
+
+//Task 2
+let myName = "Abubakr";
+let myAge = 19;
+let decNum = 50.89;
+let eaten = true;
+
+let drink;
+let digest = null;
+
+let state;
+function seeAllState() {
+  state = "You are a king";
+  console.log(state);
+  let stateCap = "Asaba";
+}
+//It fails becasue it was decaled inside the function, so thje variable can only be use in thsod eth funipn i mean the sytatecap varicable
+// console.log(stateCap);
+seeAllState();
+
+let sentence = {};
+
+function printObj(name, skill, country) {
+  sentence.name = name;
+  sentence.skill = skill;
+  sentence.country = country;
+  console.log(sentence);
+}
+printObj("Abubakr", "Full stack dev", "Nigeria");
+
+const arrNum = [600, 700, 899, 700];
+
+function addArrNum() {
+  console.log(typeof arrNum);
+  arrNum.push(600);
+  console.log(arrNum);
+}
+addArrNum();
+
+function checkScoree(student) {
+  if (student > 50) {
+    console.log("Pass");
+  } else {
+    console.log("Fail");
+  }
+}
+checkScoree(60)
