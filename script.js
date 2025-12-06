@@ -336,4 +336,89 @@ function checkScoree(student) {
     console.log("Fail");
   }
 }
-checkScoree(60)
+checkScoree(60);
+
+let check;
+let goodCheck = null;
+
+if (check == goodCheck) {
+  console.log(true);
+} else if (check === goodCheck) {
+  console.log(false);
+}
+
+function compSen(name, age) {
+  console.log(`My name is ${name} and I am ${age} years old.`);
+}
+compSen("Dev Abu", 60);
+
+function miniCalc(operators, a, b) {
+  if (operators == "+") {
+    console.log(a + b);
+  } else if (operators == "-") {
+    console.log(a - b);
+  } else if (operators == "*") {
+    console.log(a * b);
+  } else if (operators == "/") {
+    console.log(a / b);
+  } else if (operators == "**") {
+    console.log(a ** b);
+  } else if (operators == "%") {
+    console.log(a % b);
+  }
+}
+miniCalc("+", 50, 70);
+
+let sampA = 90;
+console.log((sampA += 50));
+let sampB = 90;
+console.log((sampB -= 50));
+let sampC = 90;
+console.log((sampC /= 50));
+let sampD = 90;
+console.log((sampD **= 50));
+let sampE = 90;
+console.log((sampE %= 50));
+let sampF = 90;
+console.log((sampF *= 50));
+
+function miniCalculatoor(operators, a, b) {
+  if (operators == "+") {
+    console.log(a + b);
+  } else if (operators == "-") {
+    console.log(a - b);
+  } else if (operators == "*") {
+    console.log(a * b);
+  } else if (operators == "/") {
+    console.log(a / b);
+  } else if (operators == "**") {
+    console.log(a ** b);
+  } else if (operators == "%") {
+    console.log(a % b);
+  } else {
+    console.log("Invalid operator");
+  }
+}
+miniCalculatoor("+", 50, 70);
+
+let numbers;
+
+function checkEodd(num) {
+  if (!num % 2) {
+    console.log("Odd");
+  } else if (num % 2) {
+    console.log("even");
+  }
+}
+checkEodd(5);
+
+let studentDet = {};
+
+function addDScore(name, level, scoreArr) {
+  studentDet.name = name;
+  studentDet.level = level;
+  studentDet.scoreArr += scoreArr;
+  studentDet.scoreArr += scoreArr;
+  console.log(studentDet);
+}
+addDScore("David", 500, 10)
