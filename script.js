@@ -448,3 +448,11 @@ console.log(l === m);
 console.log(l !== m);
 
 // Logical Operators
+
+// let x = 5;
+// let y = 10;
+
+// console.log(x > 0 && y > 0);
+// console.log(x > 0 && y < 0);
+// console.log(x < 0 && y > 0);
+// console.log(x < 0 && y < 0);
