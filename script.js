@@ -435,7 +435,13 @@ console.log(--g);
 let l = 10;
 let m = 20;
 
-console.log(l < b);
-console.log(l > b);
-console.log(l <= b);
-console.log(l >= b);
+console.log(l < m);
+console.log(l > m);
+console.log(l <= m);
+console.log(l >= m);
+
+console.log(l == m);
+console.log(l != m);
+
+console.log(l === m);
+console.log(l !== m);
