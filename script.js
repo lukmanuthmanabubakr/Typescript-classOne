@@ -429,3 +429,10 @@ let g = 10;
 console.log(g++);
 console.log(g);
 console.log(--g);
+
+//Comparison operaors
+
+let l = 10;
+let m = 20;
+
+console.log(a < b);
