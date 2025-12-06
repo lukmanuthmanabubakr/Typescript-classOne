@@ -436,3 +436,6 @@ let l = 10;
 let m = 20;
 
 console.log(a < b);
+console.log(a > b);
+console.log(a <= b);
+console.log(a >= b);
