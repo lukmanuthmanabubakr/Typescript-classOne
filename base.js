@@ -20,3 +20,10 @@ let No = false;
 console.log(!Yes);
 console.log(!No);
 
+let a = 'Javascript'
+
+a += " tutorial"
+
+console.log(a);
+
+

@@ -456,3 +456,15 @@ console.log(l !== m);
 // console.log(x > 0 && y < 0);
 // console.log(x < 0 && y > 0);
 // console.log(x < 0 && y < 0);
+
+let Yes = true;
+let No = false;
+
+console.log(!Yes);
+console.log(!No);
+
+let z = 'Javascript'
+
+z += " tutorial"
+
+console.log(a);
