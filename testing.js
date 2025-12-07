@@ -55,4 +55,4 @@ function App() {
   p = p + 5;
   console.log(p);
 }
-App();
+// App();

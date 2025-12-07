@@ -492,6 +492,9 @@ if (aGe >= 18 && countrys == "Nigeraia") {
 }
 
 // Conditiona statement
+//If else
 
-// 
-
+let ages = 16;
+if (ages > 18) {
+  console.log("You are an adult");
+}
