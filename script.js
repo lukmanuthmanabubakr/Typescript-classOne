@@ -478,3 +478,20 @@ let exResult = 2 ** (3 ** 2);
 console.log(exResult);
 
 //Conditional statement
+if (true) {
+  console.log("exucute");
+}
+
+let countrys = "Nigeraia";
+
+let aGe = 20;
+if (aGe >= 18 && countrys == "Nigeraia") {
+  console.log("I am a citizen");
+} else {
+  console.error("You are not a citizen");
+}
+
+// Conditiona statement
+
+// 
+

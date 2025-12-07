@@ -49,3 +49,10 @@ console.log(typeof z);
 let u = 5 ** (6 ** 9);
 console.log(u);
 console.log(typeof u);
+
+let p = 10;
+function App() {
+  p = p + 5;
+  console.log(p);
+}
+App();
