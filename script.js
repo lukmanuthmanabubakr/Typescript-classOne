@@ -432,16 +432,16 @@ console.log(--g);
 
 //Comparison operaors
 
-let l = '10';
+let l = "10";
 let m = 20;
 
-// console.log(l < m);
-// console.log(l > m);
-// console.log(l <= m);
-// console.log(l >= m);
+console.log(l < m);
+console.log(l > m);
+console.log(l <= m);
+console.log(l >= m);
 
-// console.log(l == m);
-// console.log(l != m);
+console.log(l == m);
+console.log(l != m);
 
 console.log(l == m);
 console.log(l === m);
@@ -463,8 +463,17 @@ let No = false;
 console.log(!Yes);
 console.log(!No);
 
-let z = 'Javascript'
+let z = "Javascript";
 
-z += " tutorial"
+z += " tutorial";
 
-console.log(a);
+console.log(z);
+
+//Left to right Assoicativity
+
+let reSult = 4 - 2 - 1;
+console.log(reSult);
+
+let exResult = 2 ** (3 ** 2);
+console.log(exResult);
+
