@@ -491,6 +491,7 @@ if (aGe >= 18 && countrys == "Nigeraia") {
   console.error("You are not a citizen");
 }
 
+
 // Conditiona statement
 //If else
 
