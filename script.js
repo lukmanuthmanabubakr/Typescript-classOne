@@ -522,25 +522,33 @@ switch (typeof value) {
     break;
 }
 
-let dayName = 2;
+let dayName = 8;
 
 switch (dayName) {
   case 1:
     dayName = "Sunday";
     break;
-  case 1:
-    dayName = "Sunday";
+  case 2:
+    dayName = "Monday";
     break;
-  case 1:
-    dayName = "Sunday";
+  case 3:
+    dayName = "Tuesday";
     break;
-  case 1:
-    dayName = "Sunday";
+  case 4:
+    dayName = "Wednesday";
     break;
-  case 1:
-    dayName = "Sunday";
+  case 5:
+    dayName = "Thursday";
+    break;
+  case 6:
+    dayName = "Friday";
+    break;
+  case 7:
+    dayName = "Saturday";
     break;
 
   default:
+    dayName = "No days"
     break;
 }
+console.log(dayName);
