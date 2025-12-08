@@ -522,7 +522,7 @@ switch (typeof value) {
     break;
 }
 
-let dayName = 5;
+let dayName = 4;
 
 switch (dayName) {
   case 1:
