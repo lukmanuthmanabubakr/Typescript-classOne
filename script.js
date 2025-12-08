@@ -504,9 +504,9 @@ if (ages >= 18) {
 }
 
 //Switch
-let value = 600;
+let value = "57";
 
-switch (value > 90) {
+switch (typeof value) {
   case "number":
     console.log("Number value");
     break;
@@ -519,5 +519,28 @@ switch (value > 90) {
   default:
     console.log("Other");
 
+    break;
+}
+
+let dayName = 2;
+
+switch (dayName) {
+  case 1:
+    dayName = "Sunday";
+    break;
+  case 1:
+    dayName = "Sunday";
+    break;
+  case 1:
+    dayName = "Sunday";
+    break;
+  case 1:
+    dayName = "Sunday";
+    break;
+  case 1:
+    dayName = "Sunday";
+    break;
+
+  default:
     break;
 }
