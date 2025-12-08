@@ -287,7 +287,7 @@ h **= 2;
 console.log(h);
 
 // Task 1
-alert("Am i in the right page");
+// alert("Am i in the right page");
 document.write("yes, Welcome to Dev abu's Page");
 console.log("Let's start coding");
 
@@ -494,7 +494,11 @@ if (aGe >= 18 && countrys == "Nigeraia") {
 // Conditiona statement
 //If else
 
-let ages = 16;
-if (ages > 18) {
+let ages = 19;
+if (ages >= 18) {
   console.log("You are an adult");
+} else if (age >= 16) {
+  console.log("You are a teenager");
+} else {
+  console.log("You be minor");
 }
