@@ -491,7 +491,6 @@ if (aGe >= 18 && countrys == "Nigeraia") {
   console.error("You are not a citizen");
 }
 
-
 // Conditiona statement
 //If else
 
@@ -505,3 +504,20 @@ if (ages >= 18) {
 }
 
 //Switch
+let value = 600;
+
+switch (value > 90) {
+  case "number":
+    console.log("Number value");
+    break;
+  case "string":
+    console.log("string");
+    break;
+  case "boolean":
+    console.log("boolean");
+    break;
+  default:
+    console.log("Other");
+
+    break;
+}
