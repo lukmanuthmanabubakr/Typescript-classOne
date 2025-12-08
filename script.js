@@ -503,3 +503,5 @@ if (ages >= 18) {
 } else {
   console.log("You be minor");
 }
+
+//Switch
