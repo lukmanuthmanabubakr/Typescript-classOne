@@ -586,3 +586,14 @@ for (let i = 1; i <= 5; i++) {
     console.log("Inner Loop " + j);
   }
 }
+
+//while loop
+// while(condition){
+//   // code that has to be repeated
+// }
+
+let i = 70;
+
+while (i <= 10) {
+  console.log(i);
+}
