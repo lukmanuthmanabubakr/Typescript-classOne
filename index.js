@@ -82,27 +82,26 @@ const checkPos = (checkers) => {
 const colors = ["red", "blue", "green", "yellow", "black"];
 
 const pickColor = (colors) => {
-    return colors[4]
-}
+  return colors[4];
+};
 
 // Task 9
 const vowelCounting = (countVowels) => {
-    const vowels = "aeiou"
-    let count = 0
-    if(vowels.includes(countVowels)){
-        count ++
-    }
-}
+  const vowels = "aeiou";
+  let count = 0;
+  if (vowels.includes(countVowels)) {
+    count++;
+  }
+};
 
 const acceptArray = (arr) => {
-  arr.forEach(element => {
+  arr.forEach((element) => {
     console.log(element); // print each element
   });
 };
 
 // Example usage:
 acceptArray(["Alice", "Bob", "Charlie"]);
-
 
 // const items = ["Yam", "Benas", "Rice"];
 
@@ -112,3 +111,4 @@ acceptArray(["Alice", "Bob", "Charlie"]);
 // const countLetters = (enternumer) => {
 
 // }
+

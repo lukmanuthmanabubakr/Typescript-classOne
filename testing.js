@@ -58,9 +58,57 @@ console.log(!(u < v)); // true
 let a = 4;
 let b = "15";
 
-
-
 console.log(a < b); //true
 console.log(a >= b); //false
 console.log(a == b); //false
 console.log(a !== b); //true
+
+function userScore(youCheck) {
+  let res = youCheck >= 50 ? "Pass" : "Fail";
+  console.log(res);
+}
+userScore(5);
+
+function checkEven(number) {
+  let res = number % 2 == 0 ? "Even" : "Odd";
+  console.log(res);
+}
+checkEven(2);
+
+function userLoggedIn(user) {
+  let res = user ? "Welcome back" : "Please log in";
+  console.log(res);
+}
+userLoggedIn("");
+
+function checkTemp(temp) {
+  let res = temp >= 30 ? "Hot" : "Not hot";
+  console.log(res);
+}
+checkTemp(16);
+
+let i = 0;
+
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+
+for (let nums = 0; nums <= 20; nums++) {
+  if (nums % 2 === 0) {
+    console.log(nums);
+  }
+}
+
+function keepSubtract(num) {
+  while ((num -= 5)) {
+    console.log(num);
+  }
+}
+keepSubtract(50);
+
+let groupOfNum = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+for (let index = 0; index <= groupOfNum.length; index++) {
+  let result = groupOfNum[index] * 2;
+  console.log(result);
+}
