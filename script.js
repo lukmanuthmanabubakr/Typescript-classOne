@@ -552,3 +552,11 @@ switch (dayName) {
     break;
 }
 console.log(dayName);
+
+//tenary operators
+
+let agee = 20
+
+let msgg = (agee >= 18) ? "You are an adult" : "You are a minor"
+
+console.log(msgg);
