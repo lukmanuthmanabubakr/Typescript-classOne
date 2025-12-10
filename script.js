@@ -548,15 +548,37 @@ switch (dayName) {
     break;
 
   default:
-    dayName = "No days"
+    dayName = "No days";
     break;
 }
 console.log(dayName);
 
 //tenary operators
 
-let agee = 20
+let agee = 20;
 
-let msgg = (agee >= 18) ? "You are an adult" : "You are a minor"
+let msgg = agee >= 18 ? "You are an adult" : "You are a minor";
 
 console.log(msgg);
+
+// For loop
+//If you want to displaya message multiple times, ican use a loop
+for (let i = 1; i <= 10; i++) {
+  //code to be repeated
+  console.log("Dev Abu");
+}
+
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+
+let coding = ["Html", "CSS", "JAVA", "REACT JS", "PYTHON"];
+
+for (let i = 0; i < coding.length; i++) {
+  // console.log(coding);
+  console.log(coding[i]);
+}
+
+for (let i = 0; i < i.length; i++) {
+  
+}
