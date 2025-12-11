@@ -100,7 +100,7 @@ for (let nums = 0; nums <= 20; nums++) {
 }
 
 function keepSubtract(num) {
-  while ((num -= 5)) {
+  while (num -= 5) {
     console.log(num);
   }
 }
