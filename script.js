@@ -561,4 +561,17 @@ let msgg = agee >= 18 ? "You are an adult" : "You are a minor";
 
 console.log(msgg);
 
+//break / continue
+for (let i = 1; i <= 5; i++) {
+  if (i == 3) {
+    break;
+  }
+  console.log(i);
+}
+for (let i = 1; i <= 5; i++) {
+  if (i == 3) {
+    continue;
+  }
+  console.log(i);
+}
 
