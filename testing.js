@@ -359,6 +359,18 @@ function semiCalc(firstNum, lastNum, operators) {
   }
   console.log(result);
 }
-semiCalc(50, 80, "*")
+semiCalc(50, 80, "*");
 
 //Task 15
+let arrNum = []; //object
+console.log(typeof arrNum); // oBject
+let objSet = {};
+console.log(typeof objSet); // oBject
+let numd = null;
+console.log(typeof numd); // oBject
+let isSleep = true
+console.log(typeof isSleep); //Boolean
+let amount = "500"
+console.log(typeof amount); //string
+
+
