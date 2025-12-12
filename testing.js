@@ -113,7 +113,7 @@ for (let index = 0; index <= groupOfNum.length; index++) {
   console.log(result);
 }
 
-// Task.
+// Task 1
 let myName = "Dev Abu";
 console.log(typeof myName); // string
 
@@ -129,6 +129,7 @@ console.log(typeof eat); //object
 let drink;
 console.log(typeof drink); //undefined
 
+// Task 2
 function userName(name) {
   let myNames = name;
   console.log("My Name is " + myNames);
@@ -136,6 +137,7 @@ function userName(name) {
 //console.log(myNames); it fails because myNames is not declared in the global state
 userName("ade");
 
+//Task 3
 let userDet = {};
 function detUser(name, age, country) {
   userDet.name = name;
@@ -146,6 +148,7 @@ function detUser(name, age, country) {
 }
 detUser("Bola", 50, "London");
 
+//Task 4
 function pushNewNum(num) {
   const arr5num = [500, 300, 600, 200, 800];
   arr5num.push(num);
@@ -153,6 +156,7 @@ function pushNewNum(num) {
 }
 pushNewNum(700);
 
+//Task 5
 function lilCalc(firstNum, lastNum, operators) {
   let result;
 
@@ -222,21 +226,139 @@ function lilCalc(firstNum, lastNum, operators) {
 }
 lilCalc(40, 60, "+");
 
+//Task 6
 function compVar(main, sub, operaors) {
   let result;
   if (operaors == "==") {
     result = main == sub; //true
   } else if (operaors == "===") {
-    result = main === sub;
+    result = main === sub; // false
   } else if (operaors == "!=") {
-    result = main != sub;
+    result = main != sub; // false
   } else if (operaors == "!==") {
-    result = main !== sub;
+    result = main !== sub; //true
   } else if (operaors == "<") {
-    result = main < sub;
+    result = main < sub; //false
   } else if (operaors == ">") {
-    result = main > sub;
+    result = main > sub; // false
   }
   console.log(result);
 }
-compVar(10, "10", "==");
+compVar(10, "10", ">");
+
+//Task 7
+function checkScore(score, passScore) {
+  if (score >= passScore) {
+    console.log("Pass");
+  } else if (score > 45) {
+    console.log("almost there");
+  } else {
+    console.log("Fail");
+  }
+}
+checkScore(49, 50);
+
+//Task 8
+function months(month) {
+  let res;
+  switch (month) {
+    case 1:
+      res = "January";
+      break;
+    case 2:
+      res = "Febuary";
+      break;
+    case 3:
+      res = "March";
+      break;
+    case 4:
+      res = "April";
+      break;
+    case 5:
+      res = "May";
+      break;
+    case 6:
+      res = "June";
+      break;
+    case 7:
+      res = "July";
+      break;
+    case 8:
+      res = "August";
+      break;
+    case 9:
+      res = "September";
+      break;
+    case 19:
+      res = "October";
+      break;
+    case 11:
+      res = "November";
+      break;
+    case 12:
+      res = "December";
+      break;
+    default:
+      console.log("No month");
+
+      break;
+  }
+  console.log(res);
+}
+months(7);
+
+//task 9
+function checkAdult(age) {
+  let adultAge = age >= 18 ? "Adult" : "Minor";
+  console.log(adultAge);
+}
+checkAdult(17);
+
+//Task 10
+for (let index = 1; index <= 20; index++) {
+  // console.log(index);
+  if (index % 2 === 0) {
+    console.log(index);
+  }
+}
+
+//Task 13
+function checkSomeNum(number) {
+  let even = number % 2 === 0;
+  let greaterThanTen = number > 10;
+  let odd = !even;
+  let lessThanFive = number < 5;
+
+  if (even && greaterThanTen) {
+    console.log("valid even");
+  } else if (odd || lessThanFive) {
+    console.log("Not valid");
+  } else {
+    console.log("Try again");
+  }
+}
+checkSomeNum(1);
+
+//Task 14
+function semiCalc(firstNum, lastNum, operators) {
+  let result;
+  if (operators == "+") {
+    result = firstNum + lastNum;
+  } else if (operators == "-") {
+    result = firstNum - lastNum;
+  } else if (operators == "*") {
+    result = firstNum * lastNum;
+  } else if (operators == "/") {
+    result = firstNum / lastNum;
+  } else if (operators == "%") {
+    result = firstNum % lastNum;
+  } else if (operators == "**") {
+    result = firstNum ** lastNum;
+  } else {
+    console.log("Error");
+  }
+  console.log(result);
+}
+semiCalc(50, 80, "*")
+
+//Task 15
