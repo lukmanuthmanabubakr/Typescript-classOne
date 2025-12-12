@@ -100,7 +100,7 @@ for (let nums = 0; nums <= 20; nums++) {
 }
 
 function keepSubtract(num) {
-  while (num -= 5) {
+  while ((num -= 5)) {
     console.log(num);
   }
 }
@@ -112,3 +112,131 @@ for (let index = 0; index <= groupOfNum.length; index++) {
   let result = groupOfNum[index] * 2;
   console.log(result);
 }
+
+// Task.
+let myName = "Dev Abu";
+console.log(typeof myName); // string
+
+let myAge = 40;
+console.log(typeof myAge); //number
+
+let isMarried = false;
+console.log(typeof isMarried); //boolean
+
+let eat = null;
+console.log(typeof eat); //object
+
+let drink;
+console.log(typeof drink); //undefined
+
+function userName(name) {
+  let myNames = name;
+  console.log("My Name is " + myNames);
+}
+//console.log(myNames); it fails because myNames is not declared in the global state
+userName("ade");
+
+let userDet = {};
+function detUser(name, age, country) {
+  userDet.name = name;
+  userDet.age = age;
+  userDet.country = country;
+
+  console.log(userDet);
+}
+detUser("Bola", 50, "London");
+
+function pushNewNum(num) {
+  const arr5num = [500, 300, 600, 200, 800];
+  arr5num.push(num);
+  console.log(arr5num);
+}
+pushNewNum(700);
+
+function lilCalc(firstNum, lastNum, operators) {
+  let result;
+
+  // if (operators === "+") {
+  //   result = firstNum + lastNum;
+  // } else if (operators === "-") {
+  //   result = firstNum - lastNum;
+  // } else if (operators === "*") {
+  //   result = firstNum * lastNum;
+  // } else if (operators === "/") {
+  //   result = firstNum / lastNum;
+  // } else if (operators === "**") {
+  //   result = firstNum ** lastNum;
+  // } else if (operators === "+=") {
+  //   result = firstNum += lastNum;
+  // } else if (operators === "-=") {
+  //   result = firstNum -= lastNum;
+  // } else if (operators === "*=") {
+  //   result = firstNum *= lastNum;
+  // } else if (operators === "/=") {
+  //   result = firstNum /= lastNum;
+  // } else if (operators === "**=") {
+  //   result = firstNum **= lastNum;
+  // }
+  switch (operators) {
+    case "+":
+      result = firstNum + lastNum;
+      break;
+    case "-":
+      result = firstNum - lastNum;
+      break;
+    case "*":
+      result = firstNum * lastNum;
+      break;
+    case "/":
+      result = firstNum / lastNum;
+      break;
+    case "%":
+      result = firstNum % lastNum;
+      break;
+    case "**":
+      result = firstNum ** lastNum;
+      break;
+    case "+=":
+      result = firstNum += lastNum;
+      break;
+    case "-=":
+      result = firstNum -= lastNum;
+      break;
+    case "*=":
+      result = firstNum *= lastNum;
+      break;
+    case "/=":
+      result = firstNum /= lastNum;
+      break;
+    case "%=":
+      result = firstNum %= lastNum;
+      break;
+    case "**=":
+      result = firstNum **= lastNum;
+      break;
+    default:
+      console.log("Not ALLOWED");
+      break;
+  }
+  console.log(result);
+}
+lilCalc(40, 60, "+");
+
+function compVar(main, sub, operaors) {
+  let result;
+  if (operaors == "==") {
+    result = main == sub; //true
+  } else if (operaors == "===") {
+    result = main === sub;
+  } else if (operaors == "!=") {
+    result = main != sub;
+  } else if (operaors == "!==") {
+    result = main !== sub;
+  } else if (operaors == "<") {
+    result = main < sub;
+  } else if (operaors == ">") {
+    result = main > sub;
+  }
+  console.log(result);
+}
+compVar(10, "10", "==");
