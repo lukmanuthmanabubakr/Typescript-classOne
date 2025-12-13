@@ -575,3 +575,30 @@ for (let i = 1; i <= 5; i++) {
   console.log(i);
 }
 
+let i = 0;
+
+// While loop
+while (i <= 10) {
+  // while only exscute when the conditon is true. it wont ig its force
+
+  console.log(i);
+  i++;
+}
+
+// do while loop
+let t = 1;
+do {
+  // code that want to be repeated
+  //If the conditon is true it will continue the code, but if false stop the loop
+  console.log(t);
+  t += 9;
+} while (t <= 27);
+
+//Breake / continue
+for (let i = 0; i <= 5; i++) {
+  if (i == 3) {
+    // break;
+    continue
+  }
+  console.log(i);
+}
