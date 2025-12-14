@@ -617,3 +617,20 @@ function add(a, b, operaors) {
 }
 let results = add(5, 7, "+");
 console.log(results);
+
+function fn1(x) {
+  function fn2(y) {
+    return x * y;
+  }
+  return fn2;
+}
+let sss = fn1(9)
+console.log(sss);
+console.log(sss(6));
+
+
+// Call backs function
+function display (result) {
+  console.log(result);
+  
+}
