@@ -624,13 +624,18 @@ function fn1(x) {
   }
   return fn2;
 }
-let sss = fn1(9)
+let sss = fn1(9);
 console.log(sss);
 console.log(sss(6));
 
-
 // Call backs function
-function display (result) {
+function display(result) {
   console.log(result);
-  
 }
+
+function added(num1, num2, myCallBack) {
+  let sum = num1 + num2;
+  myCallBack(sum);
+}
+
+added(30.4, display);
