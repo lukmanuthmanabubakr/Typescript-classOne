@@ -99,12 +99,23 @@ console.log(x);
 // Calculates average score
 
 // Fix task 2
-let student = {};
+let student = {
+  name: "",
+  scores: [],
+};
 
-function studentDetails(name, score) {
-  student.name = name;
-  student.score = [(score += score)];
-
-  console.log(student);
+function addScore(studentName, studentScore) {
+  student.name = studentName;
+  student.scores.push(studentScore);
 }
-studentDetails("dele", 50);
+console.log(student);
+
+addScore("Dele", 40);
+addScore("Dele", 40);
+
+function studentAverage(studentName) {
+  student.name = studentName;
+  let averageScore = addScore().studentScore / 2;
+  console.log(averageScore);
+}
+student("dele");

@@ -598,7 +598,22 @@ do {
 for (let i = 0; i <= 5; i++) {
   if (i == 3) {
     // break;
-    continue
+    continue;
   }
   console.log(i);
 }
+
+// Function
+
+function greet() {
+  console.log("Hello, Dev Abu");
+}
+greet();
+
+function add(a, b, operaors) {
+  if (operaors == "+") {
+    return a + b;
+  }
+}
+let results = add(5, 7, "+");
+console.log(results);
