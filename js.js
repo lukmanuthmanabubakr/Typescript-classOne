@@ -40,3 +40,29 @@ calculate(50, 60, results);
 //         }
 //     }
 // }
+
+function greet(name) {
+  console.log("Hello " + name);
+}
+greet("Dev");
+
+let studentDet = {
+  name: "",
+  score: [],
+};
+
+function addScore (name, score ) {
+    studentDet.name = name
+    studentDet.score.push(score)
+}
+console.log(studentDet);
+
+addScore("Wale", 90)
+addScore("Wale", 60)
+addScore("Wale", 30)
+
+function averageScore (averageScore) {
+    if (averageScore.length === 0){
+        return 0
+    }
+}

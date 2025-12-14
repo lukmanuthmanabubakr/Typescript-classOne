@@ -639,3 +639,38 @@ function added(num1, num2, myCallBack) {
 }
 
 added(30, 4, display);
+
+// Anonymous function
+let sume = function (x, y) {
+  return x + y;
+};
+console.log(sume(50, 80));
+
+setTimeout(function () {
+  console.log("Sample legend");
+}, 5000);
+
+// function myFunction() {
+//   // Function code
+//   if (condition) {
+//     myFunction();
+//   } else {
+//   }
+// }
+
+// myFunction();
+
+function countDown(num) {
+  console.log(num);
+  num--;
+  if (num >= 0) {
+    countDown(num);
+  }
+}
+countDown(10);
+
+
+// Object in Javascript
+const object_name = {
+  
+}
