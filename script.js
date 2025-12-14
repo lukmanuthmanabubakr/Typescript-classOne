@@ -638,4 +638,4 @@ function added(num1, num2, myCallBack) {
   myCallBack(sum);
 }
 
-added(30.4, display);
+added(30, 4, display);
