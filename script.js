@@ -735,7 +735,29 @@ bPer.age = 70;
 
 console.log(bPer);
 
-
 // How to create a date
-let now = new Date ()
+let now = new Date();
 console.log(now);
+console.log(typeof now);
+
+let month = now.getMonth();
+console.log(month);
+
+let year = now.getFullYear();
+console.log(year);
+
+let days = now.getDate(); // so get date returns number on the week, whule get day returns days in the week or month
+console.log(days);
+
+// Why does now stay the same even after calling getMonth()? now stay the same because its a variable that we can re use, and i haven't assined a new things to do to it.
+
+function createDate() {
+  let currentDate = new Date();
+  let currentYear = currentDate.getFullYear();
+  console.log(currentYear);
+}
+createDate();
+
+function birthYear (birth) {
+
+}
