@@ -704,8 +704,6 @@ console.log(persons);
 delete persons.age;
 console.log(persons);
 
-
-
 const aPersons = {
   firstName: "Elon",
   lastName: "Musk",
@@ -720,7 +718,19 @@ const aPersons = {
 };
 console.log(aPersons.address.city);
 
-
 // How to check if a properties exist in an object
 
 console.log("zipCode" in aPersons.address);
+
+//How to use for in loop
+
+for (let prop in aPersons) {
+  console.log(prop + ":" + aPersons[prop]);
+}
+
+const bPer = new Object();
+bPer.firstName = "Leye";
+bPer.lastName = "segun";
+bPer.age = 70;
+
+console.log(bPer);
