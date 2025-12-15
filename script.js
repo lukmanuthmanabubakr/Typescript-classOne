@@ -603,7 +603,7 @@ for (let i = 0; i <= 5; i++) {
   console.log(i);
 }
 
-// Function
+// Function here
 
 function greet() {
   console.log("Hello, Dev Abu");
@@ -669,7 +669,6 @@ function countDown(num) {
 }
 countDown(10);
 
-
 // Object in Javascript
 // const persons = {
 //   firstName: "Elon",
@@ -679,17 +678,28 @@ countDown(10);
 
 // console.log(persons);
 
-
 const persons = {
   firstName: "Elon",
   lastName: "Musk",
-  age: 55
-}
+  age: 55,
+  address: {
+    street: "Tesla Road",
+    city: "Austin",
+    state: "Texas",
+    country: "Unitedt states",
+    zipCode: "78725",
+  },
+};
 
-persons.firstName = "Mr Abu"
+persons.firstName = "Mr Abu";
 
 console.log(persons["firstName"]);
 
 //Update properties in an object
-persons.company = "tesla"
+persons.company = "tesla";
+console.log(persons);
+
+// How to delete one properties in an object
+
+delete persons.age;
 console.log(persons);
