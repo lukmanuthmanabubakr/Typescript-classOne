@@ -671,6 +671,25 @@ countDown(10);
 
 
 // Object in Javascript
-const object_name = {
-  
+// const persons = {
+//   firstName: "Elon",
+//   lastName: "Musk",
+//   age: 55
+// }
+
+// console.log(persons);
+
+
+const persons = {
+  firstName: "Elon",
+  lastName: "Musk",
+  age: 55
 }
+
+persons.firstName = "Mr Abu"
+
+console.log(persons["firstName"]);
+
+//Update properties in an object
+persons.company = "tesla"
+console.log(persons);
