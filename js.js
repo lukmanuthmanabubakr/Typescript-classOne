@@ -66,3 +66,6 @@ function averageScore (averageScore) {
         return 0
     }
 }
+
+
+// New task
