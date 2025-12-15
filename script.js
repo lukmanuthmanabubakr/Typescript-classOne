@@ -734,3 +734,8 @@ bPer.lastName = "segun";
 bPer.age = 70;
 
 console.log(bPer);
+
+
+// How to create a date
+let now = new Date ()
+console.log(now);

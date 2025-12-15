@@ -69,3 +69,7 @@ function averageScore (averageScore) {
 
 
 // New task
+function userDet (name, dob) {
+
+}
+
