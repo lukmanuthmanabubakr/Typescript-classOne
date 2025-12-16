@@ -876,3 +876,17 @@ const jPerson = {
 };
 
 jPerson.greet();
+
+// this keyword
+
+const bPerson = {
+  firstName: "Elon",
+  lastName: "Musk",
+  // greet : function () {
+  //   console.log("Dev " + this.firstName);
+  // }
+  getFullName: function () {
+    return this.firstName + " " + this.lastName;
+  },
+};
+console.log(bPerson.getFullName());
