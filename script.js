@@ -862,7 +862,20 @@ function toknowDate(myYear) {
   let age = getYear - myYear;
   return age;
 
- 
 }
 
 console.log(toknowDate(2006));
+
+
+
+
+// Javascript object methods
+
+const jPerson = {
+  firstName: "Elon",
+  lastName: "Musk",
+  greet: function greet () {
+    console.log("Hello world");
+    
+  }
+}
