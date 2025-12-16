@@ -754,10 +754,115 @@ console.log(days);
 function createDate() {
   let currentDate = new Date();
   let currentYear = currentDate.getFullYear();
-  console.log(currentYear);
+  return currentYear;
 }
-createDate();
+let myRes = createDate();
+console.log(myRes);
 
-function birthYear (birth) {
-
+function birthYear(birth) {
+  let date = new Date();
+  let curYear = date.getFullYear();
+  if (birth > curYear) {
+    return "Not possible";
+  } else if (birth < curYear) {
+    let age = curYear - birth;
+    return age;
+  } else if (birth === curYear) {
+    return "You cant be 0 years old";
+  }
 }
+
+// You said i should not log in the function,  how can i get my result in the console ?
+let myAgess = birthYear(2025);
+console.log(myAgess);
+
+// Task 3: More accurate age
+
+// Write another function that:
+// Takes full birth date (year, month, day)
+// Compares it with today
+// Adjusts the age if the birthday has not happened yet this year
+
+// Task 4: Date comparison
+// Write a function that:
+// Takes two Date objects as parameters
+// Returns which one is earlier
+
+function calculateAge(year, month, day) {
+  let today = new Date();
+
+  let currentYear = today.getFullYear();
+  let currentMonth = today.getMonth();
+  let currentDay = today.getDate();
+
+  if (year > currentYear) {
+    return "Invalid birth year";
+  }
+
+  let age = currentYear - year;
+
+  if (currentMonth < month || (currentMonth === month && currentDay < day)) {
+    age = age - 1;
+  }
+
+  return age;
+}
+
+let myBirth = calculateAge(2020, 10, 8);
+console.log(myBirth);
+
+// function takesTwoDate(date1, date2) {
+//   let oldDate = new Date(date1);
+//   let newDate = new Date(date2);
+//   let comeEar = {
+//     oldDate,
+//     newDate,
+//   };
+//   console.log(comeEar.sort());
+// }
+// takesTwoDate(2025, 2006);
+
+function guessDate(year, month, date) {
+  let today = new Date();
+
+  let currentYear = today.getFullYear();
+  let currentMonth = today.getMonth();
+  let currentDate = today.getDate();
+
+  if (year > currentYear) {
+    return "Invalid year";
+  }
+
+  if (month === currentMonth && date === currentDate) {
+    return "Birthday is today";
+  } else if (
+    month > currentMonth ||
+    (month === currentMonth && date > currentDate)
+  ) {
+    return "Birthday has not happened yet this year";
+  } else if (
+    month < currentMonth ||
+    (month === currentMonth && date < currentDate)
+  ) {
+    return "Birthday has passed this year";
+  }
+}
+
+console.log(guessDate(2025, 11, 19));
+
+// Design a function that returns:
+// "You are X years old"
+// "You will turn X in Y days"
+
+function toknowDate(myYear) {
+  let date = new Date();
+
+  let getYear = date.getFullYear();
+
+  let age = getYear - myYear;
+  return age;
+
+ 
+}
+
+console.log(toknowDate(2006));
