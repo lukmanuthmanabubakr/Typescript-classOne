@@ -879,14 +879,36 @@ jPerson.greet();
 
 // this keyword
 
-const bPerson = {
-  firstName: "Elon",
-  lastName: "Musk",
-  // greet : function () {
-  //   console.log("Dev " + this.firstName);
-  // }
-  getFullName: function () {
-    return this.firstName + " " + this.lastName;
-  },
-};
-console.log(bPerson.getFullName());
+// const bPerson = {
+// firstName: "Elon",
+// lastName: "Musk",
+//   // greet : function () {
+//   //   console.log("Dev " + this.firstName);
+//   // }
+//   getFullName: function () {
+//     return this.firstName + " " + this.lastName;
+//   },
+// };
+// console.log(bPerson.getFullName());
+
+// console.log(this);
+
+// Javascript constructor
+// const cPerson = {
+// firstName: "Elon",
+// lastName: "Musk",
+// };
+
+function Ferson(first, last) {
+  (this.firstName = first), (this.lastName = last);
+}
+
+const person1 = new Ferson("Dave", "Sam");
+const person2 = new Ferson("Dan", "Dev");
+
+console.log(person1);
+
+person1.age = 70;
+
+
+// js class
