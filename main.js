@@ -155,3 +155,16 @@ function decideSchedule() {
 }
 
 console.log(decideSchedule());
+
+function whatsToDate() {
+  let date = new Date();
+
+  let todaysDate = date.getDate();
+
+  date.setDate(todaysDate + 1);
+  let futYear = date.getFullYear();
+  let futMonth = date.getMonth();
+  let futDate = date.getDate();
+  return `Tomorrow date is ${futYear}-${futMonth}-${futDate}`;
+}
+console.log(whatsToDate());
