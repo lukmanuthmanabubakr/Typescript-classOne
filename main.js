@@ -38,31 +38,25 @@ function toknowDate(myYear, myMonth, myDate) {
     return `You are ${age} years old. Happy Birthday 🎉`;
   }
 
-  return `You are ${age} years old. You will turn ${age + 1} in ${daysLeft} days`;
+  return `You are ${age} years old. You will turn ${
+    age + 1
+  } in ${daysLeft} days`;
 }
 
 console.log(toknowDate(2006, 11, 17));
 
+// Main Task 1
 
+function daysLeft() {
+  let date = new Date();
+  let futureDate = new Date("2025-11-31");
 
+  let currentDays = date.getDate();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  let myDaysLeft = currentDays - futureDate;
+  console.log(myDaysLeft);
+}
+daysLeft()
 
 // Task 1
 function whatsTime() {
