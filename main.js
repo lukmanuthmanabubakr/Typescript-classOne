@@ -44,6 +44,26 @@ function toknowDate(myYear, myMonth, myDate) {
 console.log(toknowDate(2006, 11, 17));
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Task 1
 function whatsTime() {
   let date = new Date();
