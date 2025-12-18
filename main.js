@@ -48,14 +48,29 @@ console.log(toknowDate(2006, 11, 17));
 // Main Task 1
 function daysLeft() {
   let date = new Date();
-  let futureDate = new Date(2025, 11, 31);
+  let thisYear = date.getFullYear()
+  let futureDate = new Date();
 
-  let myDaysLeft = futureDate - date;
-  console.log(Math.floor(myDaysLeft / (1000 * 60 * 60 * 24)));
+  let myDaysLeft = futureDate - thisYear;
+  let result = Math.floor(myDaysLeft / (1000 * 60 * 60 * 24));
+  return `There are ${result} days left until the year ends`;
 }
-daysLeft();
+console.log(daysLeft());
+
+// Main task 2
 
 // Task 1
+// function leftTomorrow() {
+//   let today = new Date();
+
+//   let currentHour = today.getHours();
+//   let currentMin = today.getMinutes();
+  
+//   let toGetTomorrowHour = 
+  
+// }
+// leftTomorrow();
+
 function whatsTime() {
   let date = new Date();
 
@@ -100,3 +115,5 @@ function getTodaysDet() {
 }
 
 console.log(getTodaysDet());
+
+
