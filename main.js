@@ -48,7 +48,7 @@ console.log(toknowDate(2006, 11, 17));
 // Main Task 1
 function daysLeft() {
   let date = new Date();
-  let thisYear = date.getFullYear()
+  let thisYear = date.getFullYear();
   let futureDate = new Date();
 
   let myDaysLeft = futureDate - thisYear;
@@ -65,9 +65,9 @@ console.log(daysLeft());
 
 //   let currentHour = today.getHours();
 //   let currentMin = today.getMinutes();
-  
-//   let toGetTomorrowHour = 
-  
+
+//   let toGetTomorrowHour =
+
 // }
 // leftTomorrow();
 
@@ -116,4 +116,42 @@ function getTodaysDet() {
 
 console.log(getTodaysDet());
 
+// Practice 1
+function readTodays() {
+  let today = new Date();
 
+  let year = today.getFullYear();
+  let month = today.getMonth();
+  let day = today.getDate();
+
+  return `Today is ${year}-${month}-${day}`;
+}
+
+console.log(readTodays());
+
+//Practice 2
+function saysTime() {
+  let time = new Date();
+
+  let hour = time.getHours();
+  let mins = time.getMinutes();
+
+  return `The time now is ${hour}:${mins}`;
+}
+console.log(saysTime());
+
+function decideSchedule() {
+  let today = new Date();
+
+  let theHours = today.getHours();
+
+  if (theHours === 12) {
+    return "Its noon";
+  } else if (theHours < 12) {
+    return "It's before noon";
+  } else if (theHours > 12) {
+    return "It's after noon";
+  }
+}
+
+console.log(decideSchedule());
