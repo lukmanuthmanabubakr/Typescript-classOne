@@ -46,17 +46,14 @@ function toknowDate(myYear, myMonth, myDate) {
 console.log(toknowDate(2006, 11, 17));
 
 // Main Task 1
-
 function daysLeft() {
   let date = new Date();
-  let futureDate = new Date("2025-11-31");
+  let futureDate = new Date(2025, 11, 31);
 
-  let currentDays = date.getDate();
-
-  let myDaysLeft = currentDays - futureDate;
-  console.log(myDaysLeft);
+  let myDaysLeft = futureDate - date;
+  console.log(Math.floor(myDaysLeft / (1000 * 60 * 60 * 24)));
 }
-daysLeft()
+daysLeft();
 
 // Task 1
 function whatsTime() {
