@@ -168,3 +168,15 @@ function whatsToDate() {
   return `Tomorrow date is ${futYear}-${futMonth}-${futDate}`;
 }
 console.log(whatsToDate());
+
+function hoursLeft() {
+  let today = new Date();
+
+  let hour = today.getHours();
+
+  let left = 24 - hour;
+  return `There ${left === 1 ? "is" : "are"} ${left} ${
+    left === 1 ? "hour" : "hours"
+  } left today`;
+}
+console.log(hoursLeft());
