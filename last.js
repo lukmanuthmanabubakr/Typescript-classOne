@@ -41,8 +41,30 @@ function checkPartDay() {
 }
 console.log(checkPartDay());
 
-
 // Task 4
-function timeLeft () {
-    let date = new Date
+function timeLeft() {
+  let date = new Date();
+
+  let hour = date.getHours();
+  let mins = date.getMinutes();
+
+  let minsLeft = 60 - mins;
+  let hoursLeft = 23 - hour;
+
+  return `${hoursLeft} and  ${minsLeft}`;
 }
+console.log(timeLeft());
+
+// Task 5
+function tmDate() {
+  let date = new Date();
+  let tDate = date.getDate();
+
+  date.setDate(tDate + 1);
+
+  let tYear = date.getFullYear();
+  let tMonth = date.getMonth() + 1;
+  let myDate = date.getDate();
+  return `Tomorrow is : ${tYear}-${tMonth}-${myDate}`;
+}
+console.log(tmDate());
