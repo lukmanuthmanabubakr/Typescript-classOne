@@ -35,7 +35,9 @@ function checkPartDay() {
     return "Afternoon";
   } else if (hour < 20) {
     return "Evening";
-  } else if (hour >= 21 && hour >= 4) {
+  } else if (hour >= 21) {
+    return "Night";
+  } else if (hour >= 4) {
     return "Night";
   }
 }
@@ -68,3 +70,14 @@ function tmDate() {
   return `Tomorrow is : ${tYear}-${tMonth}-${myDate}`;
 }
 console.log(tmDate());
+
+// Task 6
+function daysLeft() {
+  let date = new Date();
+  let days = date.getDate();
+  let daysMonth = new Date(year, month + 1, 0).getDate();
+
+  let minDaysLeft = daysMonth - days;
+  return `Days left in this month: ${minDaysLeft}`;
+}
+console.log(daysLeft());
