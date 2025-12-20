@@ -1,83 +1,80 @@
-// Task 1
-
-function todaysDate() {
-  let date = new Date();
-
-  let year = date.getFullYear();
-  let month = date.getMonth() + 1;
-  let numDate = date.getDate();
-
-  return `${year}-${month}-${numDate}`;
-}
-console.log(todaysDate());
-
-// Task 2
-function todaysTime() {
+function tellsNoon() {
   let date = new Date();
 
   let hour = date.getHours();
-  let mins = date.getMinutes();
 
-  return mins < 10 ? `${hour}:0${mins}` : `${hour}:${mins}`;
-}
-console.log(todaysTime());
-
-// Task 3
-function checkPartDay() {
-  let date = new Date();
-
-  let hour = date.getHours();
-  console.log(hour);
-
-  if (hour < 11) {
+  if (hour >= 0 && hour < 5) {
+    return "Midnight";
+  } else if (hour >= 5 && hour < 12) {
     return "Morning";
-  } else if (hour < 16) {
+  } else if (hour >= 12 && hour < 18) {
     return "Afternoon";
-  } else if (hour < 20) {
-    return "Evening";
-  } else if (hour >= 21) {
-    return "Night";
-  } else if (hour >= 4) {
-    return "Night";
+  } else if (hour >= 18) {
+    return "Good evening";
+  } else return "Night";
+}
+console.log(tellsNoon());
+
+function showTodaysDate() {
+  let date = new Date();
+
+  let day = date.getDate();
+  let month = date.getMonth() + 1;
+  let year = date.getFullYear();
+
+  return `${day}-${month}-${year}`;
+}
+console.log(showTodaysDate());
+
+function toShowEndDay() {
+  let date = new Date();
+
+  let weekend = date.getDay() + 1;
+
+  if (weekend >= 6 && weekend <= 7) {
+    return "We are on weekend";
+  } else if (weekend >= 1 && weekend <= 5) {
+    return "We are on week day";
+  } else {
+    return null;
   }
 }
-console.log(checkPartDay());
+console.log(toShowEndDay());
 
-// Task 4
-function timeLeft() {
-  let date = new Date();
+function calcAge(year, month, date) {
+  let todaysDate = new Date();
 
-  let hour = date.getHours();
-  let mins = date.getMinutes();
+  let currentYear = todaysDate.getFullYear();
+  let currentMonth = todaysDate.getMonth() + 1;
+  let currentDate = todaysDate.getDate();
 
-  let minsLeft = 60 - mins;
-  let hoursLeft = 23 - hour;
+  let getAge;
 
-  return `${hoursLeft} and  ${minsLeft}`;
+  if (year > currentYear) {
+    return (getAge = "Not possible");
+  }
 }
-console.log(timeLeft());
+console.log(calcAge(2005,));
 
-// Task 5
-function tmDate() {
-  let date = new Date();
-  let tDate = date.getDate();
+function daysleftTillNextBday(year, month, day) {
+  let todaysDate = new Date();
 
-  date.setDate(tDate + 1);
+  let currYear = todaysDate.getFullYear();
+  let currMonth = todaysDate.getMonth() + 1;
+  let currDay = todaysDate.getDate();
 
-  let tYear = date.getFullYear();
-  let tMonth = date.getMonth() + 1;
-  let myDate = date.getDate();
-  return `Tomorrow is : ${tYear}-${tMonth}-${myDate}`;
+  if (year > currYear) {
+    return "you can't be born";
+  } else if (year < currYear) {
+    return currYear - year;
+  } else if (month < currMonth) {
+    return "Birthday has been done";
+  } else if (month == currMonth && day < currDay) {
+    return "Birthday has been done this month";
+  } else if (month == currMonth && day == currDay) {
+    return "Today's your birthday";
+  } else if (month == currMonth && day > currDay) {
+    return `your birthday will be in next ${day - currDay} days`;
+  }
 }
-console.log(tmDate());
-
-// Task 6
-function daysLeft() {
-  let date = new Date();
-  let days = date.getDate();
-  let daysMonth = new Date(year, month + 1, 0).getDate();
-
-  let minDaysLeft = daysMonth - days;
-  return `Days left in this month: ${minDaysLeft}`;
-}
-console.log(daysLeft());
+console.log(daysleftTillNextBday(2021, 12, 19));
