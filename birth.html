@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Countdown</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen bg-orange-100 flex items-center justify-center font-sans">
+
+  <div class="bg-white shadow-lg rounded-xl p-6 w-full max-w-md space-y-6">
+
+    <h1 class="text-2xl font-bold text-center text-orange-600">
+      Birthday Countdown
+    </h1>
+
+    <!-- Input Section -->
+    <div class="flex flex-col space-y-4">
+      <label class="text-gray-700 font-semibold" for="birthdayDay">Enter your birthday:</label>
+      <div class="flex gap-2">
+        <input type="number" id="birthdayDay" placeholder="Day" class="w-1/2 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400">
+        <input type="number" id="birthdayMonth" placeholder="Month" class="w-1/2 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400">
+      </div>
+      <button id="startCountdown" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">
+        Start Countdown
+      </button>
+    </div>
+
+    <!-- Countdown Display -->
+    <div class="grid grid-cols-2 gap-4 text-center">
+      <div class="bg-orange-50 rounded-lg p-4">
+        <p class="text-sm text-gray-600">Days</p>
+        <p id="days" class="text-2xl font-bold text-orange-700">0</p>
+      </div>
+      <div class="bg-orange-50 rounded-lg p-4">
+        <p class="text-sm text-gray-600">Hours</p>
+        <p id="hours" class="text-2xl font-bold text-orange-700">0</p>
+      </div>
+      <div class="bg-orange-50 rounded-lg p-4">
+        <p class="text-sm text-gray-600">Minutes</p>
+        <p id="minutes" class="text-2xl font-bold text-orange-700">0</p>
+      </div>
+      <div class="bg-orange-50 rounded-lg p-4">
+        <p class="text-sm text-gray-600">Seconds</p>
+        <p id="seconds" class="text-2xl font-bold text-orange-700">0</p>
+      </div>
+    </div>
+
+    <!-- Optional birthday message -->
+    <p id="birthdayMessage" class="text-center text-lg font-semibold text-green-600"></p>
+
+  </div>
+
+  <script src="birth.js"></script>
+</body>
+</html>

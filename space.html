@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Mood Tracker</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+    <h1 class="text-2xl font-bold mb-6 text-center">Daily Mood Tracker</h1>
+
+    <!-- User Input Form -->
+    <form id="moodForm" class="space-y-4">
+      <div>
+        <label for="userName" class="block font-medium mb-1">Your Name:</label>
+        <input type="text" id="userName" class="w-full border rounded px-3 py-2" placeholder="Enter your name" required>
+      </div>
+
+      <div>
+        <label for="userMood" class="block font-medium mb-1">Your Mood:</label>
+        <select id="userMood" class="w-full border rounded px-3 py-2" required>
+          <option value="happy">Happy</option>
+          <option value="sad">Sad</option>
+          <option value="neutral">Neutral</option>
+          <option value="excited">Excited</option>
+          <option value="tired">Tired</option>
+        </select>
+      </div>
+
+      <button type="submit" id="btn" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Submit Mood</button>
+    </form>
+
+    <!-- Display Messages -->
+    <div id="greetingMessage" class="mt-6 text-center text-lg font-semibold text-gray-700"></div>
+
+    <!-- Submission Count -->
+    <div id="submissionCount" class="mt-2 text-center text-sm text-gray-500"></div>
+
+    <!-- Mood History -->
+    <div id="moodHistory" class="mt-4">
+      <h2 class="text-lg font-medium mb-2">Mood History</h2>
+      <ul id="historyList" class="list-disc list-inside text-gray-700"></ul>
+    </div>
+  </div>
+
+  <!-- JavaScript connection script -->
+  <script src="space.js"></script>
+</body>
+</html>
