@@ -13,6 +13,7 @@ function getStudentAttendance(event) {
 
   let inpStudent = studentName.value;
   let inpStudentAttendance = attendanceStatus.value;
+  let filAllStdent = filterStatus.value;
   if (
     inpStudent &&
     (inpStudentAttendance == "present" || inpStudentAttendance == "absent")
@@ -27,7 +28,22 @@ function getStudentAttendance(event) {
   }
   studentCount.textContent = allStudent;
 
-  
+  studentList.innerHTML = "";
+
+  let studentToDisplay;
+  if (filAllStdent === "all") {
+    studentToDisplay = listOfStudent;
+  } else {
+    studentToDisplay = listOfStudent.filter((student) => {
+      return student.inpStudentAttendance === filAllStdent;
+    });
+  }
+
+  studentToDisplay.forEach((student) => {
+    let li = document.createElement("li");
+    li.textContent = `${student.inpStudent} (${student.inpStudentAttendance})`;
+    studentList.appendChild(li);
+  });
 }
 
 attendanceForm.addEventListener("submit", getStudentAttendance);
