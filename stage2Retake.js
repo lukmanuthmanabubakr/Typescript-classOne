@@ -10,9 +10,27 @@ let theCount = 0;
 let arrOfTask = [];
 
 function filterArrayTask() {
-  let eachStatus;
-  arrOfTask.filter((each) => {
-    each.taskStatus = eachStatus;
+  let filterTasksInp = filterTasks.value;
+  let filteredTask;
+
+  if (filterTasksInp === "all") {
+    filteredTask = arrOfTask;
+  } else if (filterTasksInp === "pending" || filterTasksInp === "completed") {
+    filteredTask = arrOfTask.filter((eachTask) => {
+      return eachTask.taskStatusInp === filterTasksInp;
+    });
+  } else {
+    filteredTask = arrOfTask.filter((eachTask) => {
+      return eachTask.taskPrioInp === filterTasksInp;
+    });
+  }
+
+  taskList.innerHTML = "";
+
+  filteredTask.forEach((eachTask) => {
+    let li = document.createElement("li");
+    li.textContent = `Name: ${eachTask.taskInp}, Priority: ${eachTask.taskPrioInp} Status: ${eachTask.taskStatusInp}`;
+    taskList.appendChild(li);
   });
 }
 
@@ -21,8 +39,6 @@ function taskTask(event) {
   let taskInp = taskTitle.value;
   let taskPrioInp = taskPriority.value;
   let taskStatusInp = taskStatus.value;
-  let filterTasksInp = filterTasks.value;
-  let taskListDisplay = taskList.value;
 
   if (!taskInp || taskPrioInp.value == "" || taskStatusInp == "") {
     return null;
@@ -33,13 +49,7 @@ function taskTask(event) {
   theCount += 1;
   taskCount.textContent = theCount;
 
-  taskList.innerHTML = "";
-
-  arrOfTask.forEach((eachTask) => {
-    let li = document.createElement("li");
-    li.textContent = `Name: ${eachTask.taskInp}, Priority: ${eachTask.taskPrioInp} Status: ${eachTask.taskStatusInp}`;
-    taskList.appendChild(li);
-  });
+  filterArrayTask();
 }
-
 taskForm.addEventListener("submit", taskTask);
+filterTasks.addEventListener("change", filterArrayTask);

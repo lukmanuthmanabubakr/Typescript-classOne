@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stage 3 Task Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white w-full max-w-2xl p-6 rounded-xl shadow-lg">
+      <h1 class="text-2xl font-bold mb-4 text-gray-800">
+        Stage 3 – Advanced Task Manager
+      </h1>
+
+      <!-- Form -->
+      <form id="taskForm" class="grid grid-cols-1 md:grid-cols-4 gap-3 mb-4">
+        <input
+          type="text"
+          id="taskTitle"
+          placeholder="Task title"
+          class="border rounded px-3 py-2 col-span-2"
+        />
+
+        <select id="taskPriority" class="border rounded px-3 py-2">
+          <option value="">Priority</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <select id="taskStatus" class="border rounded px-3 py-2">
+          <option value="">Status</option>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+        </select>
+
+        <button
+          type="submit"
+          class="bg-blue-600 text-white rounded px-4 py-2 col-span-1 md:col-span-4 hover:bg-blue-700"
+        >
+          Add Task
+        </button>
+      </form>
+
+      <!-- Controls -->
+      <div class="flex items-center justify-between mb-4">
+        <p class="text-sm text-gray-600">
+          Total Tasks: <span id="taskCount" class="font-semibold">0</span>
+        </p>
+
+        <select id="filterTasks" class="border rounded px-3 py-2 text-sm">
+          <option value="all">All</option>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+          <option value="low">Low Priority</option>
+          <option value="medium">Medium Priority</option>
+          <option value="high">High Priority</option>
+        </select>
+      </div>
+
+      <!-- Task List -->
+      <ul id="taskList" class="space-y-3">
+        <!-- <li class="border rounded p-3 flex justify-between items-start">
+          <div>
+            <p class="font-semibold">Task title</p>
+            <p class="text-sm text-gray-600">
+              Priority: High | Status: Pending
+            </p>
+            <p class="text-xs text-gray-500">Added: 12/09/2025, 14:32</p>
+          </div>
+
+          <div class="flex gap-2">
+            <button class="bg-green-500 text-white text-xs px-3 py-1 rounded">
+              Complete
+            </button>
+
+            <button class="bg-red-500 text-white text-xs px-3 py-1 rounded">
+              Delete
+            </button>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+
+    <script src="stageThree.js"></script>
+  </body>
+</html>
