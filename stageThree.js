@@ -5,10 +5,10 @@ let taskStatusCheck = document.getElementById("taskStatus"); // this allows me t
 let taskCounter = document.getElementById("taskCount"); // this allows me to get connected to my form count when a user input a task in html
 let filterEachTak = document.getElementById("filterTasks"); // this allows me to get connected to my filtgered response in html
 let taskAllList = document.getElementById("taskList"); // this allows me to get connected to all respsones in html
+let deleteBtn = document.createElement("button");
 
 let listOfTask = []; // this is the array all the respone in the task will be stored
 let taskCount = 0; // this counter serves as times the function was call.
-let isDelete = false;
 
 function filterTrack() {
   // This funtion serves as the function that handles filtering of task from all selectedors
@@ -46,8 +46,11 @@ function filterTrack() {
   });
 }
 
-function toDelete () {
-  delete listOfTask
+function toDelete(index) {
+  listOfTask.splice(index, 1);
+  taskCount -= 1;
+  taskCounter.textContent = taskCount;
+  filterTrack();
 }
 
 function trackTask(event) {
