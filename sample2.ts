@@ -1,0 +1,69 @@
+type menuList = {
+    name: string,
+    price: number
+}
+
+let allMenu:menuList[] = [
+  { name: "Pizza", price: 40 },
+  { name: "Rice", price: 60 },
+  { name: "Gorrila", price: 20 },
+  { name: "jam", price: 55 },
+  { name: "beans", price: 90 },
+];
+
+let cashInRegisters = 100;
+let orderQuer = [];
+let nextOrderIds = 0;
+
+// Add a utility function "addNewPizza" that takes a pizza object adn adds to it menu
+
+function addNewPizza(name, price) {
+  let existPizza = allMenu.some((item) => item.name === name);
+  if (existPizza) {
+    return console.log("Pizza already exist");
+  } else {
+    allMenu.push({ name, price });
+  }
+  //   console.log(allMenu);
+}
+addNewPizza("Sanine", 80);
+
+function placeOrders(name) {
+  let findItems = allMenu.find((items) => items.name === name);
+  if (findItems) {
+    cashInRegisters = cashInRegisters += findItems.price;
+    orderQuer.push({
+      pizza: findItems,
+      status: "Ordered",
+      nextOrderIds: (nextOrderIds += 1),
+    });
+  } else {
+    console.log("not seen");
+  }
+  return orderQuer;
+}
+console.log(placeOrders("jam"));
+console.log(placeOrders("Gorrila"));
+console.log(placeOrders("Rice"));
+console.log(cashInRegisters);
+
+// Challenge: Write another utility, completeOrders, that takes an orderID as a parameter
+// Find the correct order in the OrderQuer, and makrs its status as "completed" for good mesure.
+// return the found order from the function
+// Note: you'll need to ensure that we're adding IDs to your orders when we create and orders. you can sue a blobal "nextOrderIds" variable and increment it every time a new order is created to stimulate nectIDS being manages for us by a database
+
+function completeOrders(orderId:number) {
+  let lookOrder = orderQuer.find((eachItem) => {
+    return eachItem.nextOrderIds === orderId;
+  });
+  if (lookOrder) {
+    lookOrder.status = "completed";
+    return lookOrder;
+  }else {
+    return "Order not found"
+  }
+  
+}
+console.log(completeOrders(5));
+
+
