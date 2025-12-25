@@ -5,7 +5,6 @@ let taskStatusCheck = document.getElementById("taskStatus"); // this allows me t
 let taskCounter = document.getElementById("taskCount"); // this allows me to get connected to my form count when a user input a task in html
 let filterEachTak = document.getElementById("filterTasks"); // this allows me to get connected to my filtgered response in html
 let taskAllList = document.getElementById("taskList"); // this allows me to get connected to all respsones in html
-let deleteBtn = document.createElement("button");
 
 let listOfTask = []; // this is the array all the respone in the task will be stored
 let taskCount = 0; // this counter serves as times the function was call.
@@ -39,9 +38,16 @@ function filterTrack() {
 
   taskAllList.innerHTML = "";
 
-  allFilters.forEach((eachTask) => {
+  allFilters.forEach((eachTask, index) => {
     let li = document.createElement("li");
+    let delBtn = document.createElement("button");
+    delBtn.textContent = "delete";
+
+    delBtn.addEventListener("click", function () {
+      toDelete(index);
+    });
     li.textContent = `Task: ${eachTask.taskInput}. Priority: ${eachTask.taskSelPrio}. Status: ${eachTask.taskStaCheckers}. Date: ${eachTask.date}-${eachTask.month}-${eachTask.year}. Time: ${eachTask.hour}:${eachTask.mins}`;
+    li.appendChild(delBtn);
     taskAllList.appendChild(li);
   });
 }
