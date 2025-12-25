@@ -42,12 +42,18 @@ function filterTrack() {
     let li = document.createElement("li");
     let delBtn = document.createElement("button");
     delBtn.textContent = "delete";
+    let markComBtn = document.createElement("button");
+    markComBtn.textContent = "Mark complete";
 
     delBtn.addEventListener("click", function () {
       toDelete(index);
     });
+    markComBtn.addEventListener("click", function () {
+      markComplete(index);
+    });
     li.textContent = `Task: ${eachTask.taskInput}. Priority: ${eachTask.taskSelPrio}. Status: ${eachTask.taskStaCheckers}. Date: ${eachTask.date}-${eachTask.month}-${eachTask.year}. Time: ${eachTask.hour}:${eachTask.mins}`;
     li.appendChild(delBtn);
+    li.appendChild(markComBtn);
     taskAllList.appendChild(li);
   });
 }
@@ -56,6 +62,11 @@ function toDelete(index) {
   listOfTask.splice(index, 1);
   taskCount -= 1;
   taskCounter.textContent = taskCount;
+  filterTrack();
+}
+
+function markComplete(index) {
+  listOfTask[index].taskStaCheckers = "completed";
   filterTrack();
 }
 
