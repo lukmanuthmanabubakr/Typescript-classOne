@@ -2,67 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Stage 2 – Step 1</title>
+    <title>Array Layer 1 – Shopping List</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-
   <body class="bg-gray-100 min-h-screen flex items-center justify-center">
-    <div class="bg-white w-full max-w-xl p-6 rounded-xl shadow-md">
-      <h1 class="text-2xl font-bold text-gray-800 mb-4">
-        Stage 2 – Task Manager (Step 1)
-      </h1>
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+      <h1 class="text-xl font-bold mb-4">Shopping List</h1>
 
-      <!-- Task Form -->
-      <form id="taskForm" class="grid grid-cols-1 gap-3 mb-4">
+      <form id="itemForm" class="flex gap-2 mb-4">
         <input
           type="text"
-          id="taskTitle"
-          placeholder="Task title"
-          class="border rounded px-3 py-2"
+          id="itemInput"
+          placeholder="Enter item"
+          class="border px-3 py-2 rounded w-full"
         />
-
-        <select id="taskPriority" class="border rounded px-3 py-2">
-          <option value="">Select priority</option>
-          <option value="low">Low</option>
-          <option value="medium">Medium</option>
-          <option value="high">High</option>
-        </select>
-
-        <select id="taskStatus" class="border rounded px-3 py-2">
-          <option value="">Select status</option>
-          <option value="pending">Pending</option>
-          <option value="completed">Completed</option>
-        </select>
-
         <button
           type="submit"
-          class="bg-blue-600 text-white rounded py-2 hover:bg-blue-700"
+          class="bg-blue-600 text-white px-4 py-2 rounded"
         >
-          Add Task
+          Add
         </button>
       </form>
 
-      <!-- Counter -->
-      <p class="text-sm text-gray-600 mb-3">
-        Total Tasks: <span id="taskCount" class="font-semibold">0</span>
+      <p class="text-sm mb-2">
+        Total Items: <span id="itemCount">0</span>
       </p>
 
-      <!-- Task List -->
-      <ul id="taskList" class="space-y-2">
-        <!-- Example (commented)
-        <li class="border rounded p-3 bg-gray-50">
-          <p class="font-semibold">Read JavaScript</p>
-          <p class="text-sm text-gray-600">
-            Priority: Medium | Status: Pending
-          </p>
-        </li>
-        -->
-      </ul>
+      <ul id="itemList" class="list-disc pl-5 space-y-1"></ul>
     </div>
 
-
-
-
-    <script src="stage2.js"></script>
+    <script src="layerOne.js"></script>
   </body>
 </html>
