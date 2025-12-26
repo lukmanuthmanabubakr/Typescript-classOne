@@ -9,6 +9,7 @@ let students = [
   { name: "Posi", score: 40 },
   { name: "Abubakr", score: 90 },
   { name: "samason", score: 22 },
+  { name: "Jackson", score: 55 },
   { name: "jamiu", score: 68 },
   { name: "kunle", score: 75 },
   { name: "Adam", score: 48 },
@@ -46,3 +47,39 @@ function toShowPassedStudents(event) {
   });
 }
 showPassing.addEventListener("click", toShowPassedStudents);
+
+function toShowGrades(event) {
+  event.preventDefault();
+
+  let graddding = students.map((eachStudent) => {
+    if (eachStudent.score <= 50) {
+      return {
+        name: eachStudent.name,
+        score: "F",
+      };
+    } else if (eachStudent.score > 50 && eachStudent.score <= 59)
+      return {
+        name: eachStudent.name,
+        score: "C",
+      };
+    else if (eachStudent.score >= 60 && eachStudent.score < 69)
+      return {
+        name: eachStudent.name,
+        score: "B",
+      };
+    else if (eachStudent.score >= 70)
+      return {
+        name: eachStudent.name,
+        score: "A",
+      };
+  });
+
+  studentCount.textContent = graddding.length;
+
+  graddding.forEach((eachStudent) => {
+    let li = document.createElement("li");
+    li.textContent = `${eachStudent.name} - ${eachStudent.score}`;
+    studentList.appendChild(li);
+  });
+}
+showGrades.addEventListener("click", toShowGrades);
