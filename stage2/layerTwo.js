@@ -32,10 +32,17 @@ showingAll.addEventListener("click", toShowAllStudent);
 function toShowPassedStudents(event) {
   event.preventDefault();
 
-  students.filter((aboveFifty) => {
-    if (aboveFifty.score >= 50) {
-      console.log(studentList);
-    }
+  let filterStudent = students.filter((aboveFifty) => {
+    return aboveFifty.score >= 50;
+  });
+
+  studentCount.textContent = filterStudent.length;
+
+  studentList.innerHTML = "";
+  filterStudent.forEach((eachStudent) => {
+    let li = document.createElement("li");
+    li.textContent = `${eachStudent.name} - ${eachStudent.score}`;
+    studentList.appendChild(li);
   });
 }
 showPassing.addEventListener("click", toShowPassedStudents);
