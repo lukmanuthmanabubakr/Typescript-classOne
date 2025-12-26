@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Array Layer 2 – Student Scores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg">
+      <h1 class="text-xl font-bold mb-4">Student Score Processor</h1>
+
+      <div class="flex gap-2 mb-4">
+        <button id="showAll" class="bg-blue-600 text-white px-3 py-2 rounded">
+          Show All Students
+        </button>
+        <button id="showPassing" class="bg-green-600 text-white px-3 py-2 rounded">
+          Show Passing
+        </button>
+        <button id="showGrades" class="bg-purple-600 text-white px-3 py-2 rounded">
+          Show Grades
+        </button>
+      </div>
+
+      <p class="text-sm mb-2">
+        Total Students: <span id="studentCount">0</span>
+      </p>
+
+      <ul id="studentList" class="space-y-1"></ul>
+    </div>
+
+    <script src="layerTwo.js"></script>
+  </body>
+</html>
