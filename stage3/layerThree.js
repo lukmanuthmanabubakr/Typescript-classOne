@@ -63,3 +63,71 @@ let products = [
     rating: 4.5,
   },
 ];
+
+function toShowAllProducts(event) {
+  event.preventDefault();
+
+  productList.innerHTML = "";
+  products.forEach((eachProduct) => {
+    let { name, category, price, inStock, rating } = eachProduct;
+
+    let li = document.createElement("li");
+    li.textContent = `Name: ${name}, Category: ${category}, Price: ${price}, Available: ${inStock}, Rate: ${rating}`;
+    productList.appendChild(li);
+  });
+}
+showAll.addEventListener("click", toShowAllProducts);
+
+function toProductInStock(event) {
+  event.preventDefault();
+
+  let availableStock = products.filter((stockedProduct) => {
+    return stockedProduct.inStock === true;
+  });
+
+  productList.innerHTML = "";
+  availableStock.forEach((eachProduct) => {
+    let { name, category, price, inStock, rating } = eachProduct;
+
+    let li = document.createElement("li");
+    li.textContent = `Name: ${name}, Category: ${category}, Price: ${price}, Available: ${inStock}, Rate: ${rating}`;
+    productList.appendChild(li);
+  });
+}
+showAvailable.addEventListener("click", toProductInStock);
+
+function toShowTopRated(event) {
+  event.preventDefault();
+
+  let availableStock = products.sort((sortA, sortB) => {
+    return sortB.rating - sortA.rating;
+  });
+
+  productList.innerHTML = "";
+  availableStock.forEach((eachProduct) => {
+    let { name, category, price, inStock, rating } = eachProduct;
+
+    let li = document.createElement("li");
+    li.textContent = `Name: ${name}, Category: ${category}, Price: ${price}, Available: ${inStock}, Rate: ${rating}`;
+    productList.appendChild(li);
+  });
+}
+showTopRated.addEventListener("click", toShowTopRated);
+
+function toShowPriceSummary(event) {
+  event.preventDefault();
+
+  let availableStock = products.filter((product) => {
+    return product.inStock === true;
+  });
+
+  let total = availableStock.reduce((adding, product) => {
+    return adding + product.price;
+  }, 0);
+
+  let summaryPrice = total / availableStock.length;
+
+  console.log(summaryPrice);
+  productInfo.textContent = summaryPrice;
+}
+showSummary.addEventListener("click", toShowPriceSummary);
