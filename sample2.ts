@@ -1,6 +1,11 @@
 type menuList = {
     name: string,
-    price: number
+    price: number,
+}
+type orderTpe = {
+  nextOrderIds: number,
+  pizza: menuList,
+  status: string
 }
 
 let allMenu:menuList[] = [
@@ -12,7 +17,7 @@ let allMenu:menuList[] = [
 ];
 
 let cashInRegisters = 100;
-let orderQueue = [];
+let orderQueue:orderTpe[] = [];
 let nextOrderIds = 0;
 
 // Add a utility function "addNewPizza" that takes a pizza object adn adds to it menu
@@ -68,3 +73,4 @@ function completeOrders(orderId:number) {
 console.log(completeOrders(5));
 
 
+// challenge: Add an order type. it should have "id", "pizza", and "status" properties. Look through the code if you have  areminer as to what data types those should be

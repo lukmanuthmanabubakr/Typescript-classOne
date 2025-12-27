@@ -24,7 +24,7 @@ type Person = {
     name: string
     age: number
     isStudent: boolean
-    address: Address
+    address?: Address
 }
 
 
@@ -32,11 +32,6 @@ let person1: Person = {
     name: "Legend",
     age: 20,
     isStudent: true,
-    address: {
-        street: "string",
-        city: "string",
-        country: "string"
-    }
 }
 
 let person2: Person = {
@@ -49,3 +44,11 @@ let person2: Person = {
         country: "string"
     }
 }
+
+function displayInfo(person){
+    console.log(`${person.name} lives at ${person.address?.street}`);
+}
+displayInfo(person1)
+
+
+let ages:number[] = [100, 800, 5999]
