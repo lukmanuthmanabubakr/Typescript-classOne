@@ -115,11 +115,21 @@ function toFindList(event) {
 
   let input = searchTitleInp.value;
 
+  if (input === "") {
+    return null;
+  }
+
   let sorting = movieDetails.filter((eachMovie) => {
-    if (eachMovie.title === input) {
-      console.log(eachMovie.title);
-    }
+    return eachMovie.title.toLowerCase().includes(input.toLowerCase());
   });
 
+  showMoviesCount.textContent = sorting.length;
+
+  movieList.innerHTML = "";
+  sorting.forEach((eachMovie) => {
+    let li = document.createElement("li");
+    li.textContent = `Title: ${eachMovie.title} - Rating: ${eachMovie.rating} - Age Rating: ${eachMovie.ageRating}`;
+    movieList.appendChild(li);
+  });
 }
-searchTitleInp.addEventListener("click", toFindList);
+searchTitleInp.addEventListener("change", toFindList);
