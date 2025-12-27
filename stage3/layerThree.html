@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product Dashboard</title>
+
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #444;
+      padding: 10px 14px;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    .controls {
+      margin-bottom: 20px;
+    }
+
+    .info {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 8px;
+      border-bottom: 1px solid #333;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Product Dashboard</h1>
+
+  <div class="controls">
+    <button id="showAll">Show All Products</button>
+    <button id="showAvailable">Available Products</button>
+    <button id="showTopRated">Top Rated</button>
+    <button id="showSummary">Price Summary</button>
+  </div>
+
+  <div class="info">
+    <span id="productInfo">---</span>
+  </div>
+
+  <ul id="productList"></ul>
+</body>
+
+<script src="layerThree.js"></script>
+</html>

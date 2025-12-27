@@ -67,7 +67,7 @@ let users = [
     role: "viewer",
     isActive: true,
     address: { city: "Paris", country: "France" },
-    preferences: { theme: "light", notifications: true },
+    preferences: { theme: "light", notifications: false },
   },
   {
     username: "William",
@@ -95,8 +95,46 @@ function showAllUsers(event) {
   userList.innerHTML = "";
   users.forEach((user) => {
     let li = document.createElement("li");
-    li.textContent = `Name: ${user.username}, Age: ${user.age}, Role: ${user.role}, Status: ${user.isActive}, Address: ${user.address.city}-${user.address.country},Preferences: ${user.preferences.theme}`;
+    li.textContent = `Name: ${user.username}, Age: ${user.age}, Role: ${user.role}, Status: ${user.isActive}, Address: ${user.address.city}-${user.address.country},Preferences: ${user.preferences.theme}, ${user.preferences.notifications}`;
     userList.appendChild(li);
   });
 }
 showAll.addEventListener("click", showAllUsers);
+
+function toShowActiveUsers(event) {
+  event.preventDefault();
+
+  let toShowActiveUsers = users.filter((user) => {
+    return user.isActive === true;
+  });
+
+  userCount.textContent = toShowActiveUsers.length;
+
+  userList.innerHTML = "";
+
+  toShowActiveUsers.forEach((user) => {
+    let li = document.createElement("li");
+    li.textContent = `Name: ${user.username}, Age: ${user.age}, Role: ${user.role}, Status: ${user.isActive}, Address: ${user.address.city}-${user.address.country},Preferences: ${user.preferences.theme}, ${user.preferences.notifications}`;
+    userList.appendChild(li);
+  });
+}
+showActive.addEventListener("click", toShowActiveUsers);
+
+function toShowAdminsNotification(event) {
+  event.preventDefault();
+
+  let toShowActiveUsers = users.filter((user) => {
+    return user.isActive === true && user.preferences.notifications === true;
+  });
+
+  userCount.textContent = toShowActiveUsers.length;
+
+  userList.innerHTML = "";
+
+  toShowActiveUsers.forEach((user) => {
+    let li = document.createElement("li");
+    li.textContent = `Name: ${user.username}, Age: ${user.age}, Role: ${user.role}, Status: ${user.isActive}, Address: ${user.address.city}-${user.address.country},Preferences: ${user.preferences.theme}, ${user.preferences.notifications}`;
+    userList.appendChild(li);
+  });
+}
+showAdmins.addEventListener("click", toShowAdminsNotification);
