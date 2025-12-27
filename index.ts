@@ -52,3 +52,25 @@ displayInfo(person1)
 
 
 let ages:number[] = [100, 800, 5999]
+ages.push(70)
+
+type Person1 = {
+    name: string,
+    age: number,
+    isStudent: boolean
+}
+
+let per1: Person1 = {
+    name: "sege",
+    age: 509,
+    isStudent: false
+}
+let per2: Person1 = {
+    name: "layi",
+    age: 800,
+    isStudent: true
+}
+
+//Challenge: create an array of people objects and manually type it as an array of person types
+
+let people:Person1[] = [per1, per2]

@@ -1,114 +1,40 @@
-const menu = [
-  { name: "Dominus Pizza", price: 500 },
-  { name: "Legend Pizza", price: 800 },
-  { name: "Safari Pizza", price: 200 },
-  { name: "DLT Pizza", price: 100 },
-];
-
-const cashInRegister = 100;
-const orderQueue = [];
-
-// Add a utility function "addNewPizza" thats take pizza object
-// And add it to the menu
-
-const addNewPizza = (getItem) => {
-  menu.push(getItem);
+var myName = "Legend";
+// Premitives data types: string, number, boolean
+// challenge: explicity type the vairble below
+var numberOfWheels = 4;
+var isStudent = false;
+var favFood = "yam";
+var person1 = {
+    name: "Legend",
+    age: 20,
+    isStudent: true,
 };
-
-// Write another utility function placeOrder, that takes the pizza name parameter and:
-// 1 find thats pizza object in the menu
-// 2. Add the income to the cashInRegister
-// 3. Pushes a new "Order object" to the orderQueue
-// e.g (pizza: selectedPizzaObjectfromstep1, status: "ordered")
-// return the new order object
-
-const placeOrder = (pizzaItem) => {
-  const findPizza = menu.find((getItem) => getItem.name === pizzaItem);
-  cashInRegister += findPizza.price;
-  const newOrder = { pizza: findPizza, status: "ordered" };
-  orderQueue.push(newOrder);
-  return newOrder;
+var person2 = {
+    name: "Leye",
+    age: 26,
+    isStudent: false,
+    address: {
+        street: "string",
+        city: "string",
+        country: "string"
+    }
 };
-
-const completeOrder = (orderId) => {
-  const findOrder = orderQueue.find((addNewPizza) => getItem.status);
+function displayInfo(person) {
+    var _a;
+    console.log("".concat(person.name, " lives at ").concat((_a = person.address) === null || _a === void 0 ? void 0 : _a.street));
+}
+displayInfo(person1);
+var ages = [100, 800, 5999];
+ages.push(70);
+var per1 = {
+    name: "sege",
+    age: 509,
+    isStudent: false
 };
-
-//Task 1
-let age = 5;
-const name = "Abubakr";
-
-// Task 2
-const phone = {
-  brand: "Iphone",
-  model: "ios26",
-  price: 500,
+var per2 = {
+    name: "layi",
+    age: 800,
+    isStudent: true
 };
-const fruit = ["Orange", "Apple", "Banana"];
-
-// Task 4
-const doubleNumber = (addnumber) => {
-  const result = addnumber * 2;
-  return result;
-};
-
-// Taks 5
-const checkNumber = (number) => {
-  if (number > 10) {
-    return "Big Number";
-  } else {
-    return "Small Number";
-  }
-};
-
-//Task 6
-const addingNumber = (a, b, c) => {
-  const result = a + b + c;
-  return result;
-};
-
-//Task 7
-const checkPos = (checkers) => {
-  if (checkers === 0) {
-    return "Zero";
-  } else if (checkers < 0) {
-    return "Negative Numbers";
-  } else {
-    return "Positive Number";
-  }
-};
-
-// Taks 8
-const colors = ["red", "blue", "green", "yellow", "black"];
-
-const pickColor = (colors) => {
-  return colors[4];
-};
-
-// Task 9
-const vowelCounting = (countVowels) => {
-  const vowels = "aeiou";
-  let count = 0;
-  if (vowels.includes(countVowels)) {
-    count++;
-  }
-};
-
-const acceptArray = (arr) => {
-  arr.forEach((element) => {
-    console.log(element); // print each element
-  });
-};
-
-// Example usage:
-acceptArray(["Alice", "Bob", "Charlie"]);
-
-// const items = ["Yam", "Benas", "Rice"];
-
-// const pickItem = (items index =0 )
-
-// // Task 9
-// const countLetters = (enternumer) => {
-
-// }
-
+//Challenge: create an array of people objects and manually type it as an array of person types
+var people = [per1, per2];
