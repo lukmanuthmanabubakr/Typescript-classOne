@@ -93,7 +93,7 @@ const users2:users [] = [
     {username: "Dev", role: "member"},
 ]
 
-function fetchUserDetails (username: string){
+function fetchUserDetails (username: string): users{
     let user = users2.find(user => user.username === username)
     if(!user){
         throw new Error(`User with username ${username} is not found`)
