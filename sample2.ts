@@ -1,4 +1,5 @@
 type menuList = {
+  id: number
     name: string,
     price: number,
 }
@@ -11,11 +12,11 @@ type orderTpe = {
 }
 
 let allMenu:menuList[] = [
-  { name: "Pizza", price: 40 },
-  { name: "Rice", price: 60 },
-  { name: "Gorrila", price: 20 },
-  { name: "jam", price: 55 },
-  { name: "beans", price: 90 },
+  {id: 1, name: "Pizza", price: 40 },
+  {id: 2, name: "Rice", price: 60 },
+  {id: 3, name: "Gorrila", price: 20 },
+  {id: 4, name: "jam", price: 55 },
+  {id: 5, name: "beans", price: 90 },
 ];
 
 let cashInRegisters = 100;
@@ -25,16 +26,16 @@ let nextOrderIds = 0;
 // Add a utility function "addNewPizza" that takes a pizza object adn adds to it menu
 
 
-function addNewPizza(name: string, price: number) {
+function addNewPizza(id:number, name: string, price: number) {
   let existPizza = allMenu.some((item) => item.name === name);
   if (existPizza) {
     return console.log("Pizza already exist");
   } else {
-    allMenu.push({ name, price });
+    allMenu.push({id, name, price });
   }
   //   console.log(allMenu);
 }
-addNewPizza("Sanine", 80);
+addNewPizza(5, "Sanine", 80);
 
 function placeOrders(name: string) {
   let findItems = allMenu.find((items) => items.name === name);
@@ -74,5 +75,20 @@ function completeOrders(orderId:number) {
 }
 console.log(completeOrders(5));
 
+//Challenge: Create a new utility function called getPizzaDetail, It will take a parameter called identifier, but theres a twist. We want this identifier to be allowed to either be the string name of the pizza [e.g "Rice"], or to be a number ID of the pizza (e.g 2)
 
-// challenge: Add an order type. it should have "id", "pizza", and "status" properties. Look through the code if you have  areminer as to what data types those should be
+
+type Identifier = string | number
+function getPizzaDetail (identifier:Identifier) {
+  if(typeof identifier === "string"){
+    let byName = allMenu.find(search => {
+      return search.name.toLowerCase() === identifier.toLowerCase()
+    })
+  }else if (typeof identifier === "number"){
+     let byName = allMenu.find(search => {
+      return search.id === identifier
+    })
+  }else{
+    return null
+  }
+}
