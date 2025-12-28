@@ -83,4 +83,20 @@ const myOwnName1:"dev" = "dev"
 
 type UserRole = "guest" | "member" | "admin"
 
-let userRole:UserRole = "admin"
+type users = {
+    username: string
+    role: UserRole
+}
+const users2:users [] = [
+    {username: "Dele", role: "guest"},
+    {username: "Abu", role: "admin"},
+    {username: "Dev", role: "member"},
+]
+
+function fetchUserDetails (username: string){
+    let user = users2.find(user => user.username === username)
+    if(!user){
+        throw new Error(`User with username ${username} is not found`)
+    }
+    return user
+}
