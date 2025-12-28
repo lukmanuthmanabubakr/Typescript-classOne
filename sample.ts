@@ -52,13 +52,23 @@ let student2:student = {
 }
 
 
+function acceptPer (person:string, city?:string) {
+    console.log(person, city );
+}
+type accpt = {
+    person: string,
+}
+function acceptPert (person:accpt) {
+    return person
+}
 
-
-
-
-
-
-
+type accptAddress = {
+    person: string,
+    address?: string
+}
+function acceptAddress (person:accptAddress) {
+    return person
+}
 
 
 
@@ -94,3 +104,18 @@ let arrOdStudent:listStudent[] = [
     {id: "djdjdj", name: "Fola", age: 60, middleName: "lola"},
 ]
 
+// Task 4
+type books = {
+    title: string,
+    author: string,
+    pages: number
+}
+
+let booksLog:books[] = [
+    {title: "The hunter", author: "Segun", pages: 60},
+    {title: "The hunter", author: "Segun", pages: 60},
+    {title: "The hunter", author: "Segun", pages: 60},
+    {title: "The hunter", author: "Segun", pages: 60},
+]
+
+booksLog.push({title: false, author: "adam", pages: "hree"})

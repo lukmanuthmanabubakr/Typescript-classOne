@@ -45,7 +45,7 @@ let person2: Person = {
     }
 }
 
-function displayInfo(person){
+function displayInfo(person:Person){
     console.log(`${person.name} lives at ${person.address?.street}`);
 }
 displayInfo(person1)
