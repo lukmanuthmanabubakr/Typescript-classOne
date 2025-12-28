@@ -2,10 +2,12 @@ type menuList = {
     name: string,
     price: number,
 }
+
+type Status = "Ordered" | "completed"
 type orderTpe = {
   nextOrderIds: number,
   pizza: menuList,
-  status: string
+  status: Status
 }
 
 let allMenu:menuList[] = [

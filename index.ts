@@ -1,4 +1,4 @@
-let myName: string = "Legend"
+let myN: string = "Legend"
 
 // Premitives data types: string, number, boolean
 // challenge: explicity type the vairble below
@@ -74,3 +74,13 @@ let per2: Person1 = {
 //Challenge: create an array of people objects and manually type it as an array of person types
 
 let people:Person1[] = [per1, per2]
+
+
+let myOwnName: "Dev" = "Dev"
+
+const myOwnName1:"dev" = "dev"
+
+
+type UserRole = "guest" | "member" | "admin"
+
+let userRole:UserRole = "admin"
