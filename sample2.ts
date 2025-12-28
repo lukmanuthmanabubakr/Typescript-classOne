@@ -79,7 +79,7 @@ console.log(completeOrders(5));
 
 
 type Identifier = string | number
-function getPizzaDetail (identifier:Identifier) {
+export function getPizzaDetail (identifier:Identifier) {
   if(typeof identifier === "string"){
     let byName = allMenu.find(search => {
       return search.name.toLowerCase() === identifier.toLowerCase()
