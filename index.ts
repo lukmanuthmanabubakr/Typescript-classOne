@@ -100,3 +100,7 @@ function fetchUserDetails (username: string): users{
     }
     return user
 }
+
+
+let value: any = 1
+value.toUpperCase()

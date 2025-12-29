@@ -26,14 +26,15 @@ let nextOrderIds = 0;
 // Add a utility function "addNewPizza" that takes a pizza object adn adds to it menu
 
 
-function addNewPizza(id:number, name: string, price: number) {
+function addNewPizza(id:number, name: string, price: number):menuList | null {
   let existPizza = allMenu.some((item) => item.name === name);
   if (existPizza) {
-    return console.log("Pizza already exist");
-  } else {
-    allMenu.push({id, name, price });
-  }
-  //   console.log(allMenu);
+    console.log("Pizza already exist");
+    return null
+  } 
+  const newPizza: menuList = { id, name, price };
+  allMenu.push(newPizza);
+  return newPizza;
 }
 addNewPizza(5, "Sanine", 80);
 
