@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Async Layer 3</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="layer3.js"></script>
+</head>
+
+<body class="bg-black text-white min-h-screen flex flex-col items-center justify-center gap-6">
+
+  <h1 class="text-2xl font-bold">User Dashboard Loader</h1>
+
+  <button id="startProcess" class="bg-blue-600 px-6 py-2 rounded">
+    Load Dashboard
+  </button>
+
+  <div id="status" class="text-lg mt-4">Idle</div>
+
+  <div id="output" class="text-left mt-4 space-y-2"></div>
+
+  <script src="layer3.js"></script>
+
+</body>
+</html>
