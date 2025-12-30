@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aspect 4 - Async Layer 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black min-h-screen flex items-center justify-center text-white">
+
+    <div class="w-full max-w-md bg-neutral-900 rounded-xl p-6 space-y-4">
+      
+      <h1 class="text-xl font-semibold text-center">
+        Async Data Simulation
+      </h1>
+
+      <p class="text-sm text-neutral-400 text-center">
+        Click a button to simulate fetching data
+      </p>
+
+      <div class="flex flex-col gap-3">
+        <button
+          id="loadData"
+          class="bg-blue-600 hover:bg-blue-700 transition rounded-lg py-2"
+        >
+          Load Data
+        </button>
+
+        <button
+          id="loadWithError"
+          class="bg-red-600 hover:bg-red-700 transition rounded-lg py-2"
+        >
+          Load With Error
+        </button>
+      </div>
+
+      <div
+        id="status"
+        class="mt-4 text-center text-sm text-yellow-400"
+      >
+        Status will appear here
+      </div>
+
+      <ul
+        id="dataList"
+        class="mt-4 space-y-2 text-sm"
+      >
+        <!-- Data will be rendered here -->
+      </ul>
+
+    </div>
+
+    <script src="layer1.js"></script>
+  </body>
+</html>
