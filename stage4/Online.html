@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Core Refresh Project</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white min-h-screen p-6">
+  <h1 class="text-2xl font-bold mb-6">Online Course Dashboard</h1>
+
+  <div class="flex gap-4 mb-6">
+    <button id="loadCourses" class="bg-blue-600 px-4 py-2 rounded">
+      Load Courses
+    </button>
+
+    <button id="filterCompleted" class="bg-green-600 px-4 py-2 rounded">
+      Show Completed
+    </button>
+
+    <button id="averageProgress" class="bg-purple-600 px-4 py-2 rounded">
+      Average Progress
+    </button>
+  </div>
+
+  <div id="status" class="mb-4 text-yellow-400">Idle</div>
+
+  <div id="output" class="space-y-2"></div>
+
+  <script src="online.js"></script>
+</body>
+</html>
