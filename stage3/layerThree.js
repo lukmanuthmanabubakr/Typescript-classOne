@@ -62,6 +62,13 @@ let products = [
     inStock: true,
     rating: 4.5,
   },
+  {
+    name: "External Hard Drive",
+    category: "electronics",
+    price: 58000,
+    inStock: false,
+    rating: 4.5,
+  },
 ];
 
 function toShowAllProducts(event) {
