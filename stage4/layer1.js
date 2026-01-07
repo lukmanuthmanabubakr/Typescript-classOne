@@ -4,7 +4,7 @@ let status = document.getElementById("status");
 let dataList = document.getElementById("dataList");
 
 function toLoadData() {
-  status.textContent = "loading...";
+  status.textContent = "loading....";
 
   setTimeout(() => {
     dataList.textContent = "Data Loaded";
@@ -13,7 +13,7 @@ function toLoadData() {
 }
 loadData.addEventListener("click", toLoadData);
 function toErrorData() {
-  status.textContent = "loading...";
+  status.textContent = "loading....";
 
   setTimeout(() => {
     dataList.textContent = "code error";
